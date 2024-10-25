@@ -1,0 +1,13 @@
+<svg viewBox="0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient cy="55%" id="gradient">
+      <stop offset="40%" stop-color="#efefcc" stop-opacity="0" />
+      <stop offset="80%" stop-color="#efefff" />
+      <stop offset="100%" stop-color="#efefcc" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <polygon
+    points="26,86 11.2,40.4 50,12.2 88.8,40.4 74,86"
+    fill="url(#gradient)"
+  />
+</svg>
