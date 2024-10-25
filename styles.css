@@ -192,6 +192,10 @@ footer {
   margin-bottom: 40px;
 }
 
+footer p {
+  font-size: 16px;
+}
+
 .container {
   margin: 0 auto;
   max-width: 800px;
@@ -200,7 +204,7 @@ footer {
 .logo {
   display: block;
   margin: 0 auto;
-  width: 250px;
+  width: 300px;
 }
 
 .title {

@@ -1,0 +1,357 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" clip-rule="evenodd" viewBox="0 0 300 300">
+  <defs>
+    <linearGradient id="deepsea-a" x1="20" x2="285" y1="192.5" y2="192.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#39a2ed"/>
+      <stop offset="1" stop-color="#8bc7f5"/>
+    </linearGradient>
+    <linearGradient id="deepsea-b" x1="110" x2="115" y1="162.5" y2="162.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-c" x1="105" x2="110" y1="167.5" y2="167.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-d" x1="105" x2="110" y1="162.5" y2="162.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-e" x1="95" x2="100" y1="167.5" y2="167.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-f" x1="95" x2="100" y1="162.5" y2="162.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-g" x1="100" x2="105" y1="167.5" y2="167.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-h" x1="100" x2="105" y1="162.5" y2="162.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-i" x1="95" x2="100" y1="157.5" y2="157.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-j" x1="220" x2="225" y1="222.5" y2="222.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-k" x1="225" x2="230" y1="227.5" y2="227.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-l" x1="220" x2="225" y1="232.5" y2="232.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-m" x1="215" x2="220" y1="227.5" y2="227.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-n" x1="220" x2="225" y1="227.5" y2="227.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-o" x1="225" x2="230" y1="222.5" y2="222.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-p" x1="215" x2="220" y1="232.5" y2="232.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-q" x1="225" x2="230" y1="232.5" y2="232.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-r" x1="40" x2="45" y1="252.5" y2="252.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-s" x1="40" x2="45" y1="247.5" y2="247.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-t" x1="55" x2="60" y1="252.5" y2="252.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-u" x1="55" x2="60" y1="247.5" y2="247.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-v" x1="55" x2="60" y1="242.5" y2="242.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-w" x1="55" x2="60" y1="227.5" y2="227.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-x" x1="55" x2="60" y1="237.5" y2="237.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-y" x1="105" x2="110" y1="157.5" y2="157.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-z" x1="105" x2="110" y1="172.5" y2="172.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-A" x1="90" x2="95" y1="167.5" y2="167.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-B" x1="90" x2="95" y1="162.5" y2="162.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-C" x1="90" x2="95" y1="157.5" y2="157.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-D" x1="30" x2="35" y1="252.5" y2="252.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-E" x1="30" x2="35" y1="247.5" y2="247.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-F" x1="45" x2="50" y1="252.5" y2="252.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-G" x1="45" x2="50" y1="247.5" y2="247.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-H" x1="45" x2="50" y1="242.5" y2="242.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-I" x1="45" x2="50" y1="227.5" y2="227.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-J" x1="45" x2="50" y1="237.5" y2="237.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-K" x1="60" x2="65" y1="232.5" y2="232.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-L" x1="210" x2="215" y1="227.5" y2="227.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-M" x1="210" x2="215" y1="232.5" y2="232.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-N" x1="205" x2="210" y1="232.5" y2="232.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-O" x1="35" x2="40" y1="252.5" y2="252.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-P" x1="35" x2="40" y1="247.5" y2="247.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-Q" x1="50" x2="55" y1="252.5" y2="252.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-R" x1="50" x2="55" y1="247.5" y2="247.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-S" x1="50" x2="55" y1="242.5" y2="242.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-T" x1="50" x2="55" y1="227.5" y2="227.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-U" x1="50" x2="55" y1="237.5" y2="237.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-V" x1="100" x2="105" y1="157.5" y2="157.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-W" x1="100" x2="105" y1="172.5" y2="172.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-X" x1="85" x2="90" y1="167.5" y2="167.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-Y" x1="85" x2="90" y1="162.5" y2="162.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-Z" x1="80" x2="85" y1="162.5" y2="162.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-aa" x1="80" x2="85" y1="157.5" y2="157.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-ab" x1="75" x2="80" y1="162.5" y2="162.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-ac" x1="75" x2="80" y1="157.5" y2="157.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-ad" x1="85" x2="90" y1="157.5" y2="157.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+    <linearGradient id="deepsea-ae" x1="40" x2="45" y1="242.5" y2="242.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d285e" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d105e" stop-opacity=".786"/>
+    </linearGradient>
+  </defs>
+  <path d="M110 245h20v-5h20v-5h15v-5h5v-10h5v30h5v-5h10v-5h5v-5h15v10h15v-10h10v-20l5-5h20v-10h10l5-5 10-5v-20h-5l-10-10v-15l-10-10h-5l-10-5h-45l-10 10v10h-20v15h-5l-10 10v5l-10 10h-20v5h-10l-5-5v-15l5-10 2.409-3.742L115 146.475 110 145l-20 5H75v15l10 5h15v20l-15 15v5l-10 10H65v-10h-5l-5-5H20v15h10l10 5 5 5v5l-10 10h-5v10h30v-20h10l15 10h25Z" fill="url(#deepsea-a)" stroke="#000" stroke-linecap="butt" stroke-width="deepsea-.191"/>
+  <path d="M110 205v-25l5-5v-10l5-30 15-65 5-10 30-30h35l10 5 15 10v10h10v30l5 15h-5l-15 15-20 10-30 30h-10v10l-10 10v5l-15 15-30 10Z" fill="#fff"/>
+  <g stroke="#000" stroke-linecap="butt" stroke-width="deepsea-.191">
+    <path d="M145 25h5v5h-5v-5Zm-10 5h5v5h-5v-5Zm-15 65h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-10 20h5v5h-5v-5Zm85 5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-25 5h5v5h-5v-5Zm10 75h5v5h-5v-5Zm75-70h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-35-5h5v5h-5v-5Zm10 75h5v5h-5v-5Zm75-70.166h5V130h-5v-5.166ZM195 130h5v5.166h-5V130Zm-5 5h5v5.166h-5V135Z"/>
+    <path d="M205 125h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-20-15h5v5h-5v-5Zm85 5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-25 5h5v5h-5v-5Zm85 5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-95-5h5v5h-5v-5Zm10 75h5v5h-5v-5Zm75-70h5v5h-5v-5Z"/>
+    <path d="M215 125h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-20-25h5v5h-5v-5Zm0 20h5v5h-5v-5Zm5-5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm75-75h5v5h-5v-5Zm-5-10h5v5h-5v-5Zm10 10h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-75-5h5v5h-5v-5Zm-10 5h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm-10 60h5v5h-5v-5Zm30 5h5v5h-5v-5Zm-25 5h5v5h-5v-5Zm10 75h5v5h-5v-5Zm75-70h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-35-5h5v5h-5v-5Zm10 75h5v5h-5v-5Zm75-70h5v5h-5v-5Z"/>
+    <path d="M210 120h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-25-20h5v5h-5v-5Zm-10 20h5v5h-5v-5Zm10 75h5v5h-5v-5Zm50-50h5v5h-5v-5Zm30-20h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-25 5h5v5h-5v-5Zm25 10h5v5h-5v-5Zm-30-10h5v5h-5v-5Zm25 10h5v5h-5v-5Zm-15-20h5v5h-5v-5Zm10 75h5v5h-5v-5Zm75-70h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-25 5h5v5h-5v-5Zm25 10h5v5h-5v-5Zm-30-10h5v5h-5v-5Zm25 10h5v5h-5v-5Zm-15-30h5v5h-5v-5Zm0 20h5v5h-5v-5Zm5-5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm-5-70h5v5h-5v-5Zm10-30h5v5h-5v-5Zm-10 5h5v5h-5v-5Zm-15 65h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-10 20h5v5h-5v-5Zm30 5h5v5h-5v-5Zm-25 5h5v5h-5v-5Zm10 75h5v5h-5v-5Zm75-70h5v5h-5v-5Z"/>
+    <path d="M210 120h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-35-5h5v5h-5v-5Zm10 75h5v5h-5v-5Zm80-70h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-20-15h5v5h-5v-5Zm30 5h5v5h-5v-5Zm-25 5h5v5h-5v-5Zm85 5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-95-5h5v5h-5v-5Zm10 75h5v5h-5v-5Z"/>
+    <path d="M210 120h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-20-25h5v5h-5v-5Zm0 20h5v5h-5v-5Zm5-5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm75-75h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-5-15h5v5h-5v-5Zm0 10h5v5h-5v-5Zm10 0h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-75-5h5v5h-5v-5Zm-10 5h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm-10 65h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-10 20h5v5h-5v-5Zm10 75h5v5h-5v-5Zm80-70h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-25 5h5v5h-5v-5Zm25 10h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-35-5h5v5h-5v-5Zm25 10h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-20-15h5v5h-5v-5Zm10 75h5v5h-5v-5Z"/>
+    <path d="M210 120h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-25 5h5v5h-5v-5Zm25 10h5v5h-5v-5Zm-30-10h5v5h-5v-5Zm25 10h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-20-25h5v5h-5v-5Zm0 20h5v5h-5v-5Zm80-30h5v5h-5v-5Zm-40 20h5v5h-5v-5Zm-35 5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm-5-70h5v5h-5v-5Zm15-25h5v5h-5v-5Zm-10 5h5v5h-5v-5Zm-15 65h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-10 20h5v5h-5v-5Zm30 5h5v5h-5v-5Zm-25 5h5v5h-5v-5Zm10 75h5v5h-5v-5Z"/>
+    <path d="M210 120h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-35-5h5v5h-5v-5Zm10 75h5v5h-5v-5Zm75-70h5v5h-5v-5Z"/>
+    <path d="M210 120h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-20-15h5v5h-5v-5Zm10-10h5v5h-5v-5Zm0 20h5v5h-5v-5Zm-30 30h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm40-35h5v5h-5v-5Zm0-5h5v5h-5v-5Zm65-85h5v5h-5v-5Zm0 10h5v5h-5v-5Zm10 0h5v5h-5v-5Z"/>
+    <path d="M220 30h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm-5-15h5v5h-5v-5Zm-65 20h5v5h-5v-5Zm0-10h5v5h-5v-5Zm-10 5h5v5h-5v-5Zm-15 65h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-10 20h5v5h-5v-5Zm10 75h5v5h-5v-5Zm75-70h5v5h-5v-5Zm-95 55h5v5h-5v-5Zm0-5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm5-10h5v5h-5v-5Zm0 5h5v5h-5v-5Zm0 35h5v5h-5v-5Zm0 10h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm0-5h5v5h-5v-5Z"/>
+    <path d="M110 210h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm0 5h5v5h-5v-5Zm5 0h5v5h-5v-5Z"/>
+    <path d="M110 215h5v5h-5v-5Zm10-10h5v5h-5v-5Zm0 5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm0-5h5v5h-5v-5Zm-10 0h5v5h-5v-5Zm0-5h5v5h-5v-5Zm0-10h5v5h-5v-5Z"/>
+    <path d="M115 215h5v5h-5v-5Zm0 5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-5-5h5v5h-5v-5Z"/>
+    <path d="M110 220h5v5h-5v-5Zm0-5h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm-10 0h5v5h-5v-5Z"/>
+    <path d="M110 220h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-5 0h5v5h-5v-5Z"/>
+    <path d="M105 225h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm0-10h5v5h-5v-5Z"/>
+    <path d="M100 215h5v5h-5v-5Zm25-15h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm-20 5h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm30-10h5v5h-5v-5Zm5 5h5v5h-5v-5Zm0-15h5v5h-5v-5Zm-5 15h5v5h-5v-5Zm5 5h5v5h-5v-5Zm15-30h5v5h-5v-5Zm-15 5h5v5h-5v-5Zm20-10h5v5h-5v-5Zm-25 15h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm35-25h5v5h-5v-5Zm5-5h5v5h-5v-5Zm5-5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm-10 20h5v5h-5v-5Zm-25 25h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-15 5h5v5h-5v-5Zm5-10h5v5h-5v-5Z"/>
+    <path d="M120 200h5v5h-5v-5Zm10 5h5v5h-5v-5Zm5-10h5v5h-5v-5Zm0 5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-60-55h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm30-10h5v5h-5v-5Zm110-25h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-25 5h5v5h-5v-5Zm25 10h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-35-5h5v5h-5v-5Zm25 10h5v5h-5v-5Zm15 0h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm0 5h5v5h-5v-5Zm5 0h5v5h-5v-5Z"/>
+    <path d="M165 145h5v5h-5v-5Zm-15-15h5v5h-5v-5Zm15-5h5v5h-5v-5Zm-35-10h5v5h-5v-5Zm85 5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-80-15h5v5h-5v-5Zm0 20h5v5h-5v-5Zm50-30h5v5h-5v-5Zm15 0h5v5h-5v-5Zm-10 0h5v5h-5v-5Zm-50 25h5v5h-5v-5Zm0-5h5v5h-5v-5Zm5-75h5v5h-5v-5Zm5 0h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-5 5h5v5h-5v-5Z"/>
+    <path d="M150 50h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm5 5h5v5h-5v-5Zm5-15h5v5h-5v-5Z"/>
+    <path d="M160 35h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-25 15h5v5h-5v-5Zm10-20h5v5h-5v-5Zm-10 5h5v5h-5v-5Zm-15 65h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-10 20h5v5h-5v-5Zm85 5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-30 30h5v5h-5v-5Zm-30-30h5v5h-5v-5Zm-25 5h5v5h-5v-5Zm10 75h5v5h-5v-5Zm75-70h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-35-5h5v5h-5v-5Zm10 75h5v5h-5v-5Zm75-70h5v5h-5v-5Z"/>
+    <path d="M210 125h5v5h-5v-5Zm-60 0h5v5h-5v-5Zm-20-15h5v5h-5v-5Zm85 5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-80-15h5v5h-5v-5Zm0 20h5v5h-5v-5Zm70-25h5v5h-5v-5Zm-25-15h5v5h-5v-5Zm-70 55h5v5h-5v-5Zm30-20h5v5h-5v-5Zm0-5h5v5h-5v-5Zm65-85h5v5h-5v-5Zm5 5h5v5h-5v-5Zm5 5h5v5h-5v-5Zm5 0h5v5h-5v-5Z"/>
+    <path d="M225 35h5v5h-5v-5Zm-5 5h5v5h-5v-5Z"/>
+    <path d="M220 40h5v5h-5v-5Zm10-10h5v10h-5V30Z"/>
+    <path d="M230 35h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm5 5h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm0 5h5v5h-5v-5Zm5 5h5v5h-5v-5Zm5 5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-15-5h5v5h-5v-5Z"/>
+    <path d="M220 60h5v5h-5v-5Z"/>
+    <path d="M220 60h5v5h-5v-5Z"/>
+    <path d="M220 60h5v5h-5v-5Z"/>
+    <path d="M220 60h5v5h-5v-5Zm-40 0h5v5h-5v-5Zm-10 5h5v5h-5v-5Zm15 0h5v5h-5v-5Z"/>
+    <path d="M185 65h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm5 5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-5 5h5v5h-5v-5Z"/>
+    <path d="M180 80h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm0 5h5v5h-5v-5Zm40-15h5v5h-5v-5Z"/>
+    <path d="M215 70h5v5h-5v-5Zm-10 5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-10 0h5v5h-5v-5Zm15-15h5v5h-5v-5Zm-10-35h5v5h-5v-5Zm20 45h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-5-5h5v5h-5v-5Z"/>
+    <path d="M220 75h5v5h-5v-5Zm-5 0h5v5h-5v-5Z"/>
+    <path d="M220 75h5v5h-5v-5Z"/>
+    <path d="M220 75h5v5h-5v-5Zm10-10h5v5h-5v-5Zm.431 5H240v5h-9.569v-5Zm0 5H240v5h-9.569v-5Z"/>
+    <path d="M225.431 75H235v5h-9.569v-5ZM235 75h5v5h-5v-5Zm0 5h5v5h-5v-5Zm5 10h5v5h-5v-5Zm0-5h5v5h-5v-5Z"/>
+    <path d="M230 75h5v5h-5v-5Zm0 5h5v5h-5v-5Zm10 15h5v5h-5v-5Zm-15-15h5v5h-5v-5Zm0-20h5v5h-5v-5Zm0 5h5v5h-5v-5Z"/>
+    <path d="M225 65h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm10 10h5v5h-5v-5Zm0-5h5v5h-5v-5Zm-10 0h5v5h-5v-5Zm-10-40h5v5h-5v-5Zm15-5h5v5h-5v-5Zm-5-5h5v5h-5v-5Zm-5 5h5v5h-5v-5Z"/>
+    <path d="M215 25h5v5h-5v-5Z"/>
+    <path d="M215 25h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-70 10h5v5h-5v-5Zm-10 5h5v5h-5v-5Zm-10 0h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-5 60h5v5h-5v-5Zm105 0h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-10 10h5v5h-5v-5Zm-40 25h5v5h-5v-5Zm-30-25h5v5h-5v-5Zm-25 5h5v5h-5v-5Zm85 5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-95-5h5v5h-5v-5Zm10 75h5v5h-5v-5Zm75-70h5v5h-5v-5Zm-35 30h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm10 0h5v5h-5v-5Z"/>
+    <path d="M215 120h5v5h-5v-5Zm10 40h5v5h-5v-5Zm-20-35h5v5h-5v-5Zm40 5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm10 5h5v5h-5v-5Zm5 5h5v5h-5v-5Zm5 5h5v5h-5v-5Zm0 10h5v5h-5v-5Zm0 5h5v5h-5v-5Zm5 5h5v5h-5v-5Zm5 5h5v5h-5v-5Zm5 5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-15 10h5v5h-5v-5Zm5-5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-15 5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm20-25h5v5h-5v-5Zm-10-25h5v5h-5v-5Zm-15-15h5v5h-5v-5Zm-90-60h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-5-5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-40 40h5v5h-5v-5Zm-10 20h5v5h-5v-5Zm10 75h5v5h-5v-5Zm5 0h5v5h-5v-5Zm5-5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-30-5h5v5h-5v-5Zm-5-5h5v5h-5v-5Zm0 5h5v5h-5v-5Z"/>
+    <path d="M105 185h5v5h-5v-5Zm5 10h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm5 5h5v5h-5v-5Zm5 0h5v5h-5v-5Z"/>
+    <path d="M110 200h5v5h-5v-5Zm-10 0h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm10-10h5v5h-5v-5Zm0 5h5v5h-5v-5Z"/>
+    <path d="M100 205h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm5 15h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm5-5h5v5h-5v-5Z"/>
+    <path d="M95 225h5v5h-5v-5Zm-5-5h5v5h-5v-5Zm115-95h5v5h-5v-5Zm15 35h5v5h-5v-5Zm-55-10h5v5h-5v-5Zm65-25h5v5h-5v-5Zm0-5h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-45 25h5v5h-5v-5Zm30-15h5v5h-5v-5Z"/>
+    <path d="M225 120h5v5h-5v-5Zm10 0h5v5h-5v-5Zm5 0h5v5h-5v-5Z"/>
+    <path d="M235 120h5v5h-5v-5Z"/>
+    <path d="M235 120h5v5h-5v-5Zm-5-5h5v5h-5v-5Zm0 10h5v5h-5v-5Zm5 0h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-5-10h5v5h-5v-5Zm-5-5h5v5h-5v-5Zm-80 15h5v5h-5v-5Zm0-10h5v5h-5v-5Zm-25 15h5v5h-5v-5Zm25 10h5v5h-5v-5Zm10 14.754h5V150h-5v4.754ZM150 145h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-35-15h5v5h-5v-5Zm25 10h5v5h-5v-5Zm-15-20h5v5h-5v-5Zm85 5h5v5h-5v-5Zm5 45h5v5h-5v-5Zm10-10h5v5h-5v-5Zm-10 5h5v5h-5v-5ZM85 150h5v5h-5v-5Zm135-25h5v5h-5v-5Zm-45-65h5v5h-5v-5Zm-10 25h5v5h-5v-5Zm5-5h5v5h-5v-5Zm5-15h5v5h-5v-5Zm0 10h5v5h-5v-5Zm0-5h5v5h-5v-5Zm5-5h5v5h-5v-5Z"/>
+    <path d="M225 70h5v5h-5v-5Zm-45 0h5v5h-5v-5Z" fill="#fddf19"/>
+    <path d="M170 85h5v5h-5v-5Zm-5-5h5v5h-5v-5Zm-5-5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm10 0h5v5h-5v-5Zm0 5h5v5h-5v-5Zm10 0h5v5h-5v-5Zm-40 35h5v5h-5v-5Zm20-30h5v5h-5v-5Zm-45 70h5v5h-5v-5Z"/>
+    <path d="M115 150h5v5h-5v-5Z"/>
+    <path d="M115 150h5v5h-5v-5Zm-35 0h5v5h-5v-5Zm10-5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm20 0h5v5h-5v-5Zm0-5h5v5h-5v-5Zm35-25h5v5h-5v-5Zm-10 15h5v5h-5v-5Zm55-15h5v5h-5v-5Zm-30 20h5v5h-5v-5Zm10 0h5v5h-5v-5Zm-10 5h5v5h-5v-5Zm15-5h5v5h-5v-5Z"/>
+    <path d="M169.908 144.908h4.932v4.932h-4.932v-4.932ZM160 130h5v5h-5v-5Zm-15-5h5v5h-5v-5Zm55-30h5v5h-5v-5Zm-35 35h5v5h-5v-5Zm5 0h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-15-5h5v5h-5v-5Zm-15-5h5v5h-5v-5Zm40-5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-55 20h5v5h-5v-5Zm45-20h5v5h-5v-5Zm-10 20h5v5h-5v-5Z"/>
+    <path d="M170 140h5v5h-5v-5Zm5 0h5v5h-5v-5Zm10 5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm5 5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm-60-5h5v5h-5v-5Zm10-85h5v5h-5v-5Zm15-30h5v5h-5v-5Zm-10 5h5v5h-5v-5Zm10 5h5v5h-5v-5Zm-10 5h5v5h-5v-5Zm0 10h5v5h-5v-5Zm-10 15h5v5h-5v-5Zm20-35h5v5h-5v-5Zm5 0h5v5h-5v-5Z"/>
+    <path d="M160 25h5v5h-5v-5Z"/>
+    <path d="M160 25h5v5h-5v-5Zm0 5h5v5h-5v-5Z"/>
+    <path d="M160 30h5v5h-5v-5Zm10-5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm10 0h5v5h-5v-5Zm5 0h5v5h-5v-5Zm5 0h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-20 0h5v5h-5v-5Zm-35 5h5v5h-5v-5Zm10 5h5v5h-5v-5Zm-10 5h5v5h-5v-5Zm-15 40h5v5h-5v-5Zm0-5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm15-20h5v5h-5v-5Zm-10 15h5v5h-5v-5Zm5-10h5v5h-5v-5Z"/>
+    <path d="M260 190h5v5h-5v-5Zm-10-5h5v5h-5v-5Zm5 5h5v5h-5v-5Zm-35 25h5v5h-5v-5Zm50-25h5v5h-5v-5Zm-45-10h5v5h-5v-5Zm55 5h5v5h-5v-5Zm-15 5h5v5h-5v-5Zm-50 30h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm-10 10h5v5h-5v-5Zm5-10h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-5-5h5v5h-5v-5Zm35-10h5v5h-5v-5Zm5-5h5v5h-5v-5Zm-35 30h5v5h-5v-5Zm5 0h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-20 0h5v5h-5v-5Zm-20 5h5v5h-5v-5Zm0-25h5v5h-5v-5Zm0 5h5v5h-5v-5Zm0 15h5v5h-5v-5Z" fill="#0a0a0a"/>
+    <path d="M170 220h5v5h-5v-5ZM35 255h5v5h-5v-5Zm0-50h5v5h-5v-5Zm50 40h5v5h-5v-5Zm-10-10h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm0-5h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm-25 25h5v5h-5v-5Zm0-50h5v5h-5v-5Zm35-40h5v5h-5v-5Zm25 10h5v5h-5v-5Zm-75 30h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm0 5h5v5h-5v-5Zm0 40h5v5h-5v-5Zm30-20h5v5h-5v-5Zm120-5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm5 20h5v5h-5v-5ZM60 240h5v5h-5v-5Zm0 5h5v5h-5v-5Zm30 0h5v5h-5v-5Zm-10-5h5v5h-5v-5Zm-5 0h5v5h-5v-5Z" fill="#0a0a0a"/>
+    <path d="M75 240h5v5h-5v-5Zm-30 15h5v5h-5v-5Zm0-50h5v5h-5v-5Zm60-25h5v5h-5v-5Zm0-5h5v5h-5v-5Zm-25-10h5v5h-5v-5Zm15 5h5v5h-5v-5Zm-75 45h5v5h-5v-5Zm10 25h5v5h-5v-5Zm30 10h5v5h-5v-5Zm-30 5h5v5h-5v-5Zm0-50h5v5h-5v-5Zm-5 40h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm25-15h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm130-10h5v5h-5v-5ZM25 255h5v5h-5v-5Zm0-5h5v5h-5v-5Zm80-5h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-55 10h5v5h-5v-5Zm0-50h5v5h-5v-5Zm-20 15h5v5h-5v-5Zm145 25h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-20-15h5v5h-5v-5Zm5 5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm-5 5h5v5h-5v-5Z" fill="#0a0a0a"/>
+    <path d="M160 240h5v5h-5v-5Z" fill="#0a0a0a"/>
+    <path d="M160 240h5v5h-5v-5Zm-100-5h5v5h-5v-5Zm-5-5h5v5h-5v-5Zm40 15h5v5h-5v-5Z" fill="#0a0a0a"/>
+    <path d="M95 245h5v5h-5v-5Zm5 0h5v5h-5v-5Zm15 0h5v5h-5v-5Zm5 0h5v5h-5v-5Zm5 0h5v5h-5v-5Zm5-5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm5-5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm10-5h5v5h-5v-5Z" fill="#0a0a0a"/>
+    <path d="M145 240h5v5h-5v-5Zm5-5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm5-5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-15 0h5v5h-5v-5Zm-90 15h5v5h-5v-5Zm0-50h5v5h-5v-5Zm35-35h5v5h-5v-5Zm5 0h5v5h-5v-5Zm10 10h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm0 5h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm-5 0h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm-35 5h5v5h-5v-5Zm5 5h5v5h-5v-5Zm10 5h5v5h-5v-5Zm130 10h5v5h-5v-5Zm15 10h5v5h-5v-5Zm30-10h5v5h-5v-5Zm-20 0h5v5h-5v-5Zm25-25h5v5h-5v-5Zm5 0h5v5h-5v-5Zm5 0h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm20-10h5v5h-5v-5Zm-20 30h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm-5 5h5v5h-5v-5Zm15-10h5v5h-5v-5Zm0-5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm0-5h5v5h-5v-5Zm-10-35h5v5h-5v-5Zm-20 35h5v5h-5v-5Zm0 10h5v5h-5v-5Zm30-45h5v5h-5v-5Zm5 0h5v5h-5v-5Zm5 0h5v5h-5v-5Zm5 5h5v5h-5v-5Zm10 20h5v5h-5v-5Zm-5 0h5v5h-5v-5Z" fill="#0a0a0a"/>
+    <path d="M155 120h5v5h-5v-5Z"/>
+  </g>
+  <path d="M110 160h5v5h-5v-5Z" fill="url(#deepsea-b)"/>
+  <path d="M105 165h5v5h-5v-5Z" fill="url(#deepsea-c)"/>
+  <path d="M105 160h5v5h-5v-5Z" fill="url(#deepsea-d)"/>
+  <path d="M95 165h5v5h-5v-5Z" fill="url(#deepsea-e)"/>
+  <path d="M95 160h5v5h-5v-5Z" fill="url(#deepsea-f)"/>
+  <path d="M100 165h5v5h-5v-5Z" fill="url(#deepsea-g)"/>
+  <path d="M100 160h5v5h-5v-5Z" fill="url(#deepsea-h)"/>
+  <path d="M95 155h5v5h-5v-5Z" fill="url(#deepsea-i)"/>
+  <path d="M220 220h5v5h-5v-5Z" fill="url(#deepsea-j)"/>
+  <path d="M225 225h5v5h-5v-5Z" fill="url(#deepsea-k)"/>
+  <path d="M220 230h5v5h-5v-5Z" fill="url(#deepsea-l)"/>
+  <path d="M215 225h5v5h-5v-5Z" fill="url(#deepsea-m)"/>
+  <path d="M220 225h5v5h-5v-5Z" fill="url(#deepsea-n)"/>
+  <path d="M225 220h5v5h-5v-5Z" fill="url(#deepsea-o)"/>
+  <path d="M215 230h5v5h-5v-5Z" fill="url(#deepsea-p)"/>
+  <path d="M225 230h5v5h-5v-5Z" fill="url(#deepsea-q)"/>
+  <path d="M40 250h5v5h-5v-5Z" fill="url(#deepsea-r)"/>
+  <path d="M40 245h5v5h-5v-5Z" fill="url(#deepsea-s)"/>
+  <path d="M55 250h5v5h-5v-5Z" fill="url(#deepsea-t)"/>
+  <path d="M55 245h5v5h-5v-5Z" fill="url(#deepsea-u)"/>
+  <path d="M55 240h5v5h-5v-5Z" fill="url(#deepsea-v)"/>
+  <path d="M55 225h5v5h-5v-5Z" fill="url(#deepsea-w)"/>
+  <path d="M55 235h5v5h-5v-5Z" fill="url(#deepsea-x)"/>
+  <path d="M105 155h5v5h-5v-5Z" fill="url(#deepsea-y)"/>
+  <path d="M105 170h5v5h-5v-5Z" fill="url(#deepsea-z)"/>
+  <path d="M90 165h5v5h-5v-5Z" fill="url(#deepsea-A)"/>
+  <path d="M90 160h5v5h-5v-5Z" fill="url(#deepsea-B)"/>
+  <path d="M90 155h5v5h-5v-5Z" fill="url(#deepsea-C)"/>
+  <path d="M30 250h5v5h-5v-5Z" fill="url(#deepsea-D)"/>
+  <path d="M30 245h5v5h-5v-5Z" fill="url(#deepsea-E)"/>
+  <path d="M45 250h5v5h-5v-5Z" fill="url(#deepsea-F)"/>
+  <path d="M45 245h5v5h-5v-5Z" fill="url(#deepsea-G)"/>
+  <path d="M45 240h5v5h-5v-5Z" fill="url(#deepsea-H)"/>
+  <path d="M45 225h5v5h-5v-5Z" fill="url(#deepsea-I)"/>
+  <path d="M45 235h5v5h-5v-5Z" fill="url(#deepsea-J)"/>
+  <path d="M60 230h5v5h-5v-5Z" fill="url(#deepsea-K)"/>
+  <path d="M210 225h5v5h-5v-5Z" fill="url(#deepsea-L)"/>
+  <path d="M210 230h5v5h-5v-5Z" fill="url(#deepsea-M)"/>
+  <path d="M205 230h5v5h-5v-5Z" fill="url(#deepsea-N)"/>
+  <path d="M35 250h5v5h-5v-5Z" fill="url(#deepsea-O)"/>
+  <path d="M35 245h5v5h-5v-5Z" fill="url(#deepsea-P)"/>
+  <path d="M50 250h5v5h-5v-5Z" fill="url(#deepsea-Q)"/>
+  <path d="M50 245h5v5h-5v-5Z" fill="url(#deepsea-R)"/>
+  <path d="M50 240h5v5h-5v-5Z" fill="url(#deepsea-S)"/>
+  <path d="M50 225h5v5h-5v-5Z" fill="url(#deepsea-T)"/>
+  <path d="M50 235h5v5h-5v-5Z" fill="url(#deepsea-U)"/>
+  <path d="M100 155h5v5h-5v-5Z" fill="url(#deepsea-V)"/>
+  <path d="M100 170h5v5h-5v-5Z" fill="url(#deepsea-W)"/>
+  <path d="M85 165h5v5h-5v-5Z" fill="url(#deepsea-X)"/>
+  <path d="M85 160h5v5h-5v-5Z" fill="url(#deepsea-Y)"/>
+  <path d="M80 160h5v5h-5v-5Z" fill="url(#deepsea-Z)"/>
+  <path d="M80 155h5v5h-5v-5Z" fill="url(#deepsea-aa)"/>
+  <path d="M75 160h5v5h-5v-5Z" fill="url(#deepsea-ab)"/>
+  <path d="M75 155h5v5h-5v-5Z" fill="url(#deepsea-ac)"/>
+  <path d="M85 155h5v5h-5v-5Z" fill="url(#deepsea-ad)"/>
+  <path d="M40 240h5v5h-5v-5Z" fill="url(#deepsea-ae)"/>
+</svg>
