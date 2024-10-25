@@ -89,6 +89,7 @@
   --black: #111111;
   --baby-blue: #6666ff;
   --pale-yellow: #efefaa;
+  --white: #efefef;
 }
 
 body {
@@ -157,7 +158,7 @@ code {
 
 code {
   display: inline-block;
-  background-color: white;
+  background-color: var(--white);
   padding: 5px 10px;
   border-radius: 10px;
 }
@@ -211,15 +212,45 @@ footer p {
   margin-bottom: 30px;
 }
 
+.prompt {
+  font-family: "IBM Plex Mono";
+  font-weight: 400;
+  display: inline-block;
+  background-color: var(--baby-blue);
+  color: var(--white);
+  border-radius: 5px;
+  padding: 12px 20px;
+  box-shadow: 5px 5px 0px var(--black);
+}
+
+.libraries a {
+  color: var(--baby-blue);
+}
+
+.libraries code {
+  letter-spacing: 0.5px;
+  margin-right: 5px;
+}
+
+.libraries a:hover code {
+  background-color: var(--baby-blue);
+  color: var(--white);
+}
+
 .news {
   transform: rotate(3deg);
   font-family: "IBM Plex Mono";
   font-weight: 400;
   display: inline-block;
   background-color: var(--baby-blue);
-  color: white;
+  color: var(--white);
   border-radius: 5px;
   padding: 12px 20px;
   margin-top: 10px;
   box-shadow: 5px 5px 0px var(--black);
+}
+
+a:hover .news {
+  background-color: var(--white);
+  color: var(--baby-blue);
 }
