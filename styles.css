@@ -105,7 +105,11 @@ p {
   margin: 0;
   padding: 0;
   font-size: 19px;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+p + p {
+  margin-top: 20px;
 }
 
 p a {
@@ -154,12 +158,13 @@ pre,
 code {
   font-family: "IBM Plex Mono";
   font-weight: 400;
+  font-size: 19px;
 }
 
 code {
   display: inline-block;
   background-color: var(--white);
-  padding: 5px 10px;
+  padding: 2px 10px;
   border-radius: 10px;
 }
 
@@ -197,13 +202,18 @@ footer p {
   font-size: 16px;
 }
 
+footer p a {
+  color: var(--black);
+  border-bottom: 2px dotted var(--black);
+}
+
 .container {
   margin: 0 auto;
   max-width: 800px;
 }
 
 .logo {
-  display: block;
+  display: inline-block;
   margin: 0 auto;
   width: 300px;
 }

@@ -2,6 +2,22 @@
 
 Official [p2panda](https://p2panda.org) website.
 
+## Requirements
+
+* Ruby
+* Jekyll
+* Bundler
+
+## Development
+
+```bash
+# Install Ruby dependencies
+bundle install
+
+# Run development web server
+jekyll serve
+```
+
 ## License
 
 [`CC-BY-SA-4.0 License`](LICENSE)
