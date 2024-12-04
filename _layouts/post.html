@@ -4,6 +4,6 @@ layout: default
 
 <h2>{{ page.title }}</h2>
 
-<p><em>{{ page.date | date: "%d.%m.%y" }} by {{ page.author | default: site.author }}</p></em>
+<p>✉️ Posted <em>{{ page.date | date: "%d.%m.%y" }}</em> by <em>{{ page.author | default: site.author }}</p></em>
 
 {{ content }}

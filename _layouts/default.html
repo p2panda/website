@@ -12,10 +12,10 @@
   <body>
     <div class="container">
       <header>
-        <a href="{{ "/" | absolute_url }}">
+        <a href="{{ site.url }}">
           <img alt="p2panda" class="logo" src="{{ "./assets/images/p2panda.svg" | relative_url }}">
         </a>
-        <h1 class="title">p2panda</h1>
+        <h1 class="title"><a href="{{ site.url }}">p2panda</a></h1>
         <p>{{ site.tagline }}</p>
       </header>
       <main>

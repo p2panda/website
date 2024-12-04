@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<h2>About</h2>
+<h2 id="about"><a href="#about">About<a></h2></a>
 <p>Some about text with <strong>highlights</strong>.</p>
 <p>
-<h2>Libraries</h2>
+<h2 id="libraries"><a href="#libraries">Libraries</a></h2>
 <ul class="libraries">
   <li>
     <a href="#"><code>p2panda-core</code></a> Everything a panda needs to fullfill panda needs, like it's deeds to do the panda bamboo!
@@ -29,7 +29,7 @@ layout: default
     <a href="#"><code>p2panda-sync</code></a> Everything a panda needs to fullfill panda needs, like it's deeds to do the panda bamboo!
   </li>
 </ul>
-<h2>Projects</h2>
+<h2 id="projects"><a href="#projects">Projects</a></h2>
 <a href="#">
   <section class="project">
     <h3>Aardvark (working title)</h3>
@@ -50,7 +50,7 @@ layout: default
     <h3>rhio</h3>
   </section>
 </a>
-<h2>News</h2>
+<h2 id="news"><a href="#news">News</a></h2>
 {% for post in site.posts %}
 <a href="{{ post.url | prepend: site.baseurl }}">
   <section class="news">
@@ -59,5 +59,5 @@ layout: default
   </section>
 </a>
 {% endfor %}
-<h2>Contact</h2>
-<p>Find all source code on <a href="https://github.com/p2panda" target="_blank">GitHub</a>, follow us on the <a href="https://autonomous.zone/@p2panda" target="_blank">Fediverse</a> or write us an <a href="mailto:contributors@p2panda.org">EMail</a>! We'd love to hear from you!</p>
+<h2 id="contact"><a href="#contact">Contact</a></h2>
+<p>Find all source code on <a href="https://github.com/p2panda" target="_blank">GitHub</a>, follow us on the <a href="https://autonomous.zone/@p2panda" target="_blank">Fediverse</a> or write us an <a href="mailto:contributors@p2panda.org">Email</a>! We'd love to hear from you!</p>
