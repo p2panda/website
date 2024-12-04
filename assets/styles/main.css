@@ -154,7 +154,7 @@ h1 {
 
 h2 {
   font-size: 30px;
-  margin-top: 50px;
+  margin-top: 70px;
   margin-bottom: 30px;
   text-decoration-thickness: 2px;
 }
@@ -243,6 +243,14 @@ header {
 
 .title {
   margin-bottom: 30px;
+}
+
+.tagline {
+  font-size: 21px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.2;
 }
 
 /* Libraries */
