@@ -88,7 +88,9 @@
 :root {
   --black: #111111;
   --baby-blue: #6666ff;
+  --peach: #f99a9a;
   --pale-yellow: #efefaa;
+  --gray-light: #434343;
   --gray: #ddd;
   --white: #efefef;
 }
@@ -229,6 +231,15 @@ footer {
   transform: rotate(3deg);
 }
 
+.note {
+  font-size: 16px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  padding-left: 10px;
+  color: var(--gray-light);
+  border-left: 5px solid var(--peach);
+}
+
 /* Header */
 
 header {
@@ -262,6 +273,7 @@ header {
 
 .libraries li {
   display: block;
+  margin-bottom: 30px;
 }
 
 .libraries a {
