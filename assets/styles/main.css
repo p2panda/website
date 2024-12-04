@@ -180,13 +180,11 @@ code {
 }
 
 ul {
-  list-style: none;
-  padding: 0;
+  padding: 20px;
 }
 
 li {
   font-size: 19px;
-  display: block;
 }
 
 li + li {
@@ -242,6 +240,15 @@ footer p a {
   border-radius: 5px;
   padding: 12px 20px;
   box-shadow: 5px 5px 0px var(--black);
+}
+
+.libraries {
+  list-style: none;
+  padding: 0;
+}
+
+.libraries li {
+  display: block;
 }
 
 .libraries a {
