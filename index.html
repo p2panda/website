@@ -3,10 +3,15 @@ layout: default
 ---
 
 <h2 id="about"><a href="#about">About</a></h2>
-<p>Some about text with <strong>highlights</strong>.</p>
+<p>p2panda aims at providing everything you need to build <strong>modern, privacy-respecting and secure local-first applications.</strong></p>
+<p>We want to be <strong>as modular as possible</strong>, because we believe that this contributes the most to a wider, interoperable p2p ecosystem and outlives "framework lock in".</p>
+<p>Many of our Rust crates do only handle raw bytes and are <strong>fully compatible with your own data types and any CRDT</strong>. But no worries, in case you don't plan on building your own peer-to-peer protocol, we have you covered as well with <strong>all features required to build a mobile or desktop application</strong>.</p>
+<p>We're using <strong>existing libraries</strong> like <a href="https://github.com/n0-computer/iroh" target="_blank">iroh</a> and well-established standards as BLAKE3, Ed25519, STUN, CBOR, TLS, QUIC, <a href="https://github.com/ucan-wg/spec" target="_blank">UCAN</a>, <a href="https://en.m.wikipedia.org/wiki/Double_Ratchet_Algorithm" target="_blank">Double Ratcheting</a> and more - as long as they give us the radical offline-first guarantee we need.
+<p>We want collaboration, encryption and access-control to work even when we can't assume any sort of connectivity for a long time. For this we're doing exciting <strong>research in collaboration with academics.</strong></p>
+<p>p2panda is "broadcast-only" at it's heart, making any data not only offline-first but also compatible for <strong>any communication infrastructure of the post-internet</strong>, for example shortwave, packet radio, Bluetooth Low Energy, LoRa or simply a USB stick</p>
+<p>p2panda is a very diverse project, we're maintaining our crates, apply for grants, design protocols and do research in radically distributed data-types, organise community events and write peer-to-peer applications with our friends and collaborators.</p>
 <p>
 <h2 id="libraries"><a href="#libraries">Libraries</a></h2>
-<div class="note">Many of these Rust crates do only handle raw bytes and are fully compatible with your own data types or CRDTs. If you don't care about that and just want features, we have you covered as well!</div>
 <ul class="libraries">
   <li>
     <a href="https://crates.io/crates/p2panda-net" target="_blank"><code>📦 p2panda-net</code></a> Find peers in a peer-to-peer network, connect to them directly - whereever they are - and exchange any data of your interest in form of byte streams.
