@@ -6,7 +6,7 @@ Official [p2panda](https://p2panda.org) website.
 
 [`CC-BY-SA-4.0 License`](LICENSE)
 
-This project has received funding from the European Union’s Horizon 2020
+*This project has received funding from the European Union’s Horizon 2020
 research and innovation programme within the framework of the NGI-POINTER
 Project funded under grant agreement No 871528, NGI-ASSURE No 957073 and
-NGI0-ENTRUST No 101069594.
+NGI0-ENTRUST No 101069594.*
