@@ -39,6 +39,17 @@ layout: default
     <code>🚧 p2panda-groups</code> Local-first roles and group-encryption with Post-Compromise-Security and optional Forward-Secrecy.
   </li>
 </ul>
+<h2 id="news"><a href="#news">News</a></h2>
+<div class="grid">
+  {% for post in site.posts %}
+  <section class="post rotate-3">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+      <h3>✉️ {{ post.title }}</h3>
+      <p>{{ post.date | date: "%d.%m.%y"}} ~ {{ post.subtitle }}</p>
+    </a>
+  </section>
+  {% endfor %}
+</div>
 <h2 id="projects"><a href="#projects">Projects</a></h2>
 <div class="grid">
   <section class="project rotate-2">
@@ -75,17 +86,6 @@ layout: default
       <p>aquadoggo is a node implementation based on an earlier version of p2panda. It is a intended as a tool for making the design and build of local-first, collaborative p2p applications as simple as possible, and hopefully even a little fun!</p>
     </a>
   </section>
-</div>
-<h2 id="news"><a href="#news">News</a></h2>
-<div class="grid">
-  {% for post in site.posts %}
-  <section class="post rotate-3">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-      <h3>✉️ {{ post.title }}</h3>
-      <p>{{ post.date | date: "%d.%m.%y"}} ~ {{ post.subtitle }}</p>
-    </a>
-  </section>
-  {% endfor %}
 </div>
 <h2 id="contact"><a href="#contact">Contact</a></h2>
 <p>Find all source code on <a href="https://github.com/p2panda" target="_blank">GitHub</a>, follow us on the <a href="https://autonomous.zone/@p2panda" target="_blank">Fediverse</a> or write us an <a href="mailto:contributors@p2panda.org">Email</a>! We'd love to hear from you!</p>
