@@ -4,9 +4,9 @@ Official [p2panda](https://p2panda.org) website.
 
 ## Requirements
 
-* Ruby
-* Jekyll
-* Bundler
+* Ruby `3.2.0`
+* Jekyll `3.10.0`
+* Bundler `2.4.1`
 
 ## Development
 
