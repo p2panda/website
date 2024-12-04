@@ -30,34 +30,42 @@ layout: default
   </li>
 </ul>
 <h2 id="projects"><a href="#projects">Projects</a></h2>
-<a href="#">
-  <section class="project">
-    <h3>Aardvark (working title)</h3>
+<div class="grid">
+  <section class="project rotate-3">
+    <a href="#">
+      <h3>📝 Aardvark (working title)</h3>
+      <p>Some project description of this thing</p>
+    </a>
   </section>
-</a>
-<a href="#">
-  <section class="project">
-    <h3>Toolkitty (working title)</h3>
+  <section class="project rotate1">
+    <a href="#">
+      <h3>📢 Toolkitty (working title)</h3>
+      <p>Some project description of this thing</p>
+    </a>
   </section>
-</a>
-<a href="#">
-  <section class="project">
-    <h3>Meli Bees</h3>
+  <section class="project rotate-2">
+    <a href="#">
+      <h3>🐝 Meli Bees</h3>
+      <p>Some project description of this thing</p>
+    </a>
   </section>
-</a>
-<a href="#">
-  <section class="project">
-    <h3>rhio</h3>
+  <section class="project rotate2">
+    <a href="#">
+      <h3>📡 rhio</h3>
+      <p>Some project description of this thing</p>
+    </a>
   </section>
-</a>
+</div>
 <h2 id="news"><a href="#news">News</a></h2>
-{% for post in site.posts %}
-<a href="{{ post.url | prepend: site.baseurl }}">
-  <section class="news">
-    <h3>{{ post.title }}</h3>
-    <p>{{ post.date | date: "%d.%m.%y"}} ~ {{ post.subtitle }}</p>
+<div class="grid">
+  {% for post in site.posts %}
+  <section class="post rotate-3">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+      <h3>✉️ {{ post.title }}</h3>
+      <p>{{ post.date | date: "%d.%m.%y"}} ~ {{ post.subtitle }}</p>
+    </a>
   </section>
-</a>
-{% endfor %}
+  {% endfor %}
+</div>
 <h2 id="contact"><a href="#contact">Contact</a></h2>
 <p>Find all source code on <a href="https://github.com/p2panda" target="_blank">GitHub</a>, follow us on the <a href="https://autonomous.zone/@p2panda" target="_blank">Fediverse</a> or write us an <a href="mailto:contributors@p2panda.org">Email</a>! We'd love to hear from you!</p>
