@@ -52,7 +52,8 @@ While working on the new version of p2panda we also embarked on collaborations w
 
 This autumn we started working on an autonomous coordination toolkit with a new team of six people, supported by the [Innovate Creative Catalyst Programme](https://iuk-business-connect.org.uk/programme/creative-catalyst/) in UK. The goal of the project is to develop a mobile and desktop app for collectives, organisers and places to share resources and organise events in a shared calendar. This tool has been a [very old goal](https://media.ccc.de/v/36c3-10756-p2panda) of p2panda and it feels incredibly special to have the release of the first prototype scheduled for Spring of 2025!
 
-![](/assets/images/very_large_phone.jpg)
+![Ongoing development of the resource sharing and event organising app with p2panda.
+](/assets/images/very_large_phone.jpg)
 
 > Ongoing development of the resource sharing and event organising app with p2panda.
 
@@ -82,6 +83,6 @@ Our crates are ready to be played with and we are more than curious to hear abou
 
 We are very excited to be hearing from you!
 
-![](/assets/images/adz_sam_glyph.jpg)
+![Tired by happy p2panda team: adz, sam and glyph in London](/assets/images/adz_sam_glyph.jpg)
 
-> Happy and tired p2panda team: adz, sam and glyph in London
+> Tired by happy p2panda team: adz, sam and glyph in London
