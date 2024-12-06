@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=1">
+    <title>{% if page.title %}{{ page.title }} ~ {% endif -%} {{ site.title }}</title>
+    <meta name="description" content="{{ site.tagline }}" />
+    <link rel="stylesheet" href="{{ "./assets/styles/main.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ "./assets/styles/highlight.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link rel="icon" href="{{ "./assets/images/deepsea-panda.svg" | relative_url }}">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="{{ site.url }}">
+          <img alt="{{ site.title }}" class="logo" src="{{ "./assets/images/p2panda.svg" | relative_url }}">
+        </a>
+        <h1 class="title"><a href="{{ site.url }}">{{ site.title }}</a></h1>
+        <p class="tagline">{{ site.tagline }}</p>
+      </header>
+      <main>
+        {{ content }}
+      </main>
+      <footer>
+        <p><em>This project has received funding from the European Union’s Horizon 2020 research and innovation programme within the framework of the NGI-POINTER Project funded under grant agreement No 871528, NGI-ASSURE No 957073 and NGI0-ENTRUST No 101069594.</em></p>
+        <p>CC BY-SA 4.0 - <a href="mailto:contributors@p2panda.org">Contact</a> - <a href="{{ "feed.xml" | absolute_url }}">RSS</a> - <a href="https://autonomous.zone/@p2panda" target="_blank">Fediverse</a> - <a href="https://github.com/p2panda" target="_blank">GitHub</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

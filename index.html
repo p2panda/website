@@ -1,31 +1,120 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=1">
-    <meta name="description" content="Your toolbox to build offline-first applications!">
-    <title>p2panda</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" href="./assets/images/deepsea-panda.svg">
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <img class="logo" src="./assets/images/p2panda.svg">
-        <h1 class="title">p2panda</h1>
-        <p>Your toolbox to build offline-first applications!</p>
-      </header>
-      <main>
-        <section class="news">
-          <h3>New everything soon ..</h3>
-          <p>We're very excited to be sharing our new p2panda version soon with you .. next to a fresh website!</p>
-        </section>
-        <h2>Contact</h2>
-        <p>Find all source code on <a href="https://github.com/p2panda" target="_blank">GitHub</a>, follow us on the <a href="https://autonomous.zone/@p2panda" target="_blank">Fediverse</a> or write us an <a href="mailto:contributors@p2panda.org">eMail</a>! We'd love to hear from you! ♡</p>
-      </main>
-      <footer>
-        <p><em>This project has received funding from the European Union’s Horizon 2020 research and innovation programme within the framework of the NGI-POINTER Project funded under grant agreement No 871528, NGI-ASSURE No 957073 and NGI0-ENTRUST No 101069594.</em></p>
-      </footer>
-    </div>
-  </body>
-</html>
+---
+layout: default
+---
+
+<h2 id="about"><a href="#about">About</a></h2>
+<p>p2panda aims to provide everything you need to build <strong>modern,
+    privacy-respecting and secure local-first applications.</strong></p>
+<p>We have adopted a <strong>modular approach</strong>—allowing projects
+the freedom to pick what they need and integrate it with minimal friction.
+We believe this approach contributes the most to a wider, interoperable p2p
+ecosystem which outlives “framework lock-in”.</p>
+<p>Many of our Rust crates operate over raw bytes and are <strong>fully
+    compatible with your own data types and any CRDT</strong>. In case you
+don't plan on building your own peer-to-peer protocol, we have you covered
+with <strong>all features required to build a mobile or desktop
+    application</strong>.</p>
+<p>We're using <strong>existing libraries</strong> like <a
+    href="https://github.com/n0-computer/iroh" target="_blank">iroh</a> and
+well-established standards such as BLAKE3, Ed25519, STUN, CBOR, TLS, QUIC,
+<a href="https://github.com/ucan-wg/spec" target="_blank">UCAN</a>, <a
+href="https://en.m.wikipedia.org/wiki/Double_Ratchet_Algorithm"
+target="_blank">Double Ratchet</a> and more - as long as they give us the
+radical offline-first guarantee we need.</p>
+<p>We want collaboration, encryption and access-control to work even when
+operating over unstable or ephemeral connections. Towards this end, we're
+<strong>actively working alongside researchers to design and implement
+    resilient solutions</strong>.</p>
+<p>p2panda is "broadcast-only" at it’s heart, making any data not only
+offline-first but also <strong>compatible with post-internet communication
+    infrastructure</strong>, such as shortwave, packet radio, Bluetooth Low
+Energy, LoRa or simply a USB stick.</p>
+<p>p2panda is a very <strong>multifaceted project</strong>: We maintain our crates, apply
+for grants, design protocols and do research in radically distributed
+data-types. We organise community events and write peer-to-peer
+applications with our friends and collaborators. There's a lot coming
+up.</p>
+<p>
+<h2 id="libraries"><a href="#libraries">Libraries</a></h2>
+<ul class="libraries">
+  <li>
+    <a href="https://crates.io/crates/p2panda-net" target="_blank"><code>📦 p2panda-net</code></a> Find peers in a peer-to-peer network, connect to them directly - whereever they are - and exchange any data of your interest in form of byte streams.
+  </li>
+  <li>
+    <a href="https://crates.io/crates/p2panda-discovery" target="_blank"><code>📦 p2panda-discovery</code></a> Solutions to find other peers in your local network or on the internet and interfaces to start building your own.
+  </li>
+  <li>
+    <a href="https://crates.io/crates/p2panda-sync" target="_blank"><code>📦 p2panda-sync</code></a> Protocol implementations to efficiently "catch up on past state" with other peers and interfaces to start building your own.
+  </li>
+  <li>
+    <a href="https://crates.io/crates/p2panda-blobs" target="_blank"><code>📦 p2panda-blobs</code></a> Efficiently send, receive and store (very large) files.
+  </li>
+  <li>
+    <a href="https://crates.io/crates/p2panda-core" target="_blank"><code>📦 p2panda-core</code></a> Highly extensible data-types of the p2panda protocol for secure, distributed and efficient exchange of data, supporting networks from the internet to packet radio, LoRa or BLE.
+  </li>
+  <li>
+    <a href="https://crates.io/crates/p2panda-store" target="_blank"><code>📦 p2panda-store</code></a> Interfaces and implementations to store p2panda data types in databases, memory or file-systems.
+  </li>
+  <li>
+    <a href="https://crates.io/crates/p2panda-stream" target="_blank"><code>📦 p2panda-stream</code></a> Collection of various methods to process your p2panda data streams before they reach your application.
+  </li>
+  <li>
+    <code>🚧 p2panda-node</code> All-in-one p2panda node which can be used in federated or fully decentralised networks or both at the same time. Supports "lightweight" clients running in the browser.
+  </li>
+  <li>
+    <code>🚧 p2panda-caps</code> Manage access to data with capabilities.
+  </li>
+  <li>
+    <code>🚧 p2panda-groups</code> Local-first roles and group-encryption with Post-Compromise-Security and optional Forward-Secrecy.
+  </li>
+</ul>
+<h2 id="news"><a href="#news">News</a></h2>
+<div class="grid">
+  {% for post in site.posts %}
+  <section class="post rotate-3">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+      <h3>✉️ {{ post.title }}</h3>
+      <p>{{ post.date | date: "%d.%m.%y"}} ~ {{ post.subtitle }}</p>
+    </a>
+  </section>
+  {% endfor %}
+</div>
+<h2 id="projects"><a href="#projects">Projects</a></h2>
+<div class="grid">
+  <section class="project">
+    <a href="https://gitlab.gnome.org/Teams/Design/other-app-mockups/-/tree/master/aardvark" target="_blank">
+      <h3>📝 Aardvark (coming mid-2025)</h3>
+      <p>Local-first, collaborative text editor, based on GTK and Automerge.</p>
+      <p>This is a collaboration with friends from GNOME and part of a general research to explore local-first code, UI and UX patterns in GTK applications.</p>
+    </a>
+  </section>
+  <section class="project">
+    <a href="https://github.com/toolkitties/toolkitty" target="_blank">
+      <h3>📢 Toolkitty (coming mid-2025)</h3>
+      <p>Autonomous coordination toolkit for collectives, organisers and places to share resources and organise events in a shared calendar.</p>
+      <p>Toolkitty is built for iOS, Android and Desktop with Tauri.</p>
+    </a>
+  </section>
+  <section class="project">
+    <a href="https://github.com/p2panda/meli" target="_blank">
+      <h3>🐝 Meli Bees App</h3>
+      <p>Collaborative Android app for sighting and categorisation of Meliponini bee species in the Brazilian Amazon.</p>
+      <p>This project is a collaboration between p2panda and Meli and built with Flutter and aquadoggo.</p>
+    </a>
+  </section>
+  <section class="project">
+    <a href="https://github.com/HIRO-MicroDataCenters-BV/rhio" target="_blank">
+      <h3>📡 rhio</h3>
+      <p>rhio is a peer-to-peer message router and file sync solution allowing processes to rapidly exchange messages and efficiently replicate large files without any centralised coordination.</p>
+      <p>rhio was built in collaboration with HIRO.</p>
+    </a>
+  </section>
+  <section class="project">
+    <a href="https://github.com/p2panda/aquadoggo" target="_blank">
+      <h3>🐬 aquadoggo</h3>
+      <p>aquadoggo is a node implementation based on an earlier version of p2panda. It is a intended as a tool for making the design and build of local-first, collaborative p2p applications as simple as possible, and hopefully even a little fun!</p>
+    </a>
+  </section>
+</div>
+<h2 id="contact"><a href="#contact">Contact</a></h2>
+<p>Find all source code on <a href="https://github.com/p2panda" target="_blank">GitHub</a>, follow us on the <a href="https://autonomous.zone/@p2panda" target="_blank">Fediverse</a> or write us an <a href="mailto:contributors@p2panda.org">Email</a>! We'd love to hear from you!</p>
