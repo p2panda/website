@@ -20,11 +20,11 @@ For projects seeking a more fully-integrated system, it's possible to stack our 
 
 **Data-type agnostic**
 
-Some of our new building blocks, such as the sync, discovery and networking layers, do not require any custom p2panda data types. This makes it possible to bring your own data types and develop your protocol on top of the functionality we provide. We're planning the same for our group encryption implementation which is set to be released next year.
+Some of our new building blocks, such as the sync, discovery and networking layers, do not require any custom p2panda data types. This makes it possible to bring your own data types and develop your protocol on top. We're planning the same for our group encryption implementation which is set to be released next year.
 
 **Support any CRDT or application data**
 
-Previous versions of p2panda came with their own approaches to CRDTs and schema validation. While we still believe this is great for future high-level modules, we wanted to offer you the option of combining all p2panda modules with Automerge, yjs or any other CRDT of your choice. Of course not every application needs a CRDT and at the end of the day the payload is just "raw bytes".
+Previous versions of p2panda came with their own approaches to CRDTs and schema validation. While we still believe this is great for future high-level modules, we wanted to offer you the option of combining all p2panda modules with Automerge, Yjs or any other CRDT of your choice. Of course not every application needs a CRDT and at the end of the day the payload is just "raw bytes".
 
 **Re-use as much existing technology and well-established standards as possible**
 
@@ -46,7 +46,7 @@ As already mentioned, not all modules require you to use p2panda data types, but
 
 **Collaborations with GNOME and HIRO**
 
-While working on the new version of p2panda we also embarked on collaborations with two very different teams. We've been exploring code, UX and UI patterns for GTK-based applications with a group of developers from GNOME and together will release the first GTK-based, collaborative, local-first text editor. Our second collaboration has been a project developed together with HIRO, a company based in the Netherlands. Together we designed and implemented a solution named "rhio" to sync large files and messages between "micro data centers" in a fully distributed manner.
+While working on the new version of p2panda we also embarked on collaborations with two very different teams. We've been exploring code, UX and UI patterns for GTK-based applications with a group of developers from GNOME and together will release the first GTK-based, collaborative, local-first text editor. Our second collaboration has been a project developed together with HIRO, a company based in the Netherlands. Together we designed and implemented a solution named "rhio" to sync large files and messages between micro data centers in a fully distributed manner.
 
 **Autonomous Coordination App**
 
@@ -83,6 +83,6 @@ Our crates are ready to be played with and we are more than curious to hear abou
 
 We are very excited to be hearing from you!
 
-![Tired by happy p2panda team: adz, sam and glyph in London](/assets/images/adz_sam_glyph.jpg)
+![Tired but happy p2panda team: adz, sam and glyph in London](/assets/images/adz_sam_glyph.jpg)
 
 > Tired but happy p2panda team: adz, sam and glyph in London.
