@@ -85,4 +85,4 @@ We are very excited to be hearing from you!
 
 ![Tired by happy p2panda team: adz, sam and glyph in London](/assets/images/adz_sam_glyph.jpg)
 
-> Tired by happy p2panda team: adz, sam and glyph in London
+> Tired by happy p2panda team: adz, sam and glyph in London.
