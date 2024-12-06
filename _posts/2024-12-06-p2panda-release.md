@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "2024 Updates and Our New Release!"
-subtitle: ""
+subtitle: "So much has happened this year and we're so excited to finally tell you about it!"
 ---
 
 So much has happened this year and we're so excited to finally tell you about it!
