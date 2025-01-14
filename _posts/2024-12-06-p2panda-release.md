@@ -67,7 +67,7 @@ This is our first release of the new p2panda version and we will surely learn mo
 
 **Group Encryption and Capabilities**
 
-Next year we'll also be working on an [NLNet](https://nlnet.nl/) NGI Zero Entrust grant to integrate [UCAN](https://github.com/ucan-wg/spec)-based access control and secure group encryption with Post-Compromise-Security and optional Forward-Secrecy, based on research into [decentralised secure group messaging](https://dl.acm.org/doi/10.1145/3460120.3484542). algorithms. Our plan is to implement these as Rust modules which you can pull into your application, independent of p2panda, your choice of data types or networking stack. The DCGKA algorithm we'll be implementing is essentially Signal's Double Ratchet Algorithm with PCS and FS, made fit for offline-first use.
+Next year we'll also be working on an [NLNet](https://nlnet.nl/) NGI Zero Entrust grant to integrate [UCAN](https://github.com/ucan-wg/spec)-based access control and secure group encryption with Post-Compromise-Security and optional Forward-Secrecy, based on research into [decentralised secure group messaging](https://dl.acm.org/doi/10.1145/3460120.3484542) algorithms. Our plan is to implement these as Rust modules which you can pull into your application, independent of p2panda, your choice of data types or networking stack. The DCGKA algorithm we'll be implementing is essentially Signal's Double Ratchet Algorithm with PCS and FS, made fit for offline-first use.
 
 Together with researchers we'll be publishing our work on fork-tolerant and prunable append-only logs, hopefully in the form of another blog post or even a paper.
 
