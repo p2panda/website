@@ -36,7 +36,7 @@ If we can dream wildly we can even see a "Shared Nodes System Setting" one day, 
 
 Another factor is that we don't want anyone to learn about our actions or data, even if we consider them our "trusted" circle. Just because Billie, Claire and Davie are best friends, Davie doesn't need to always be able to see what Billie and Claire talked about. There are many ways to model such a system, but data encryption can be one of them.
 
-Shared Nodes, Delivery Services, Caching Layers, or however you want to call them, are already implemented and successfully used and deployed in production. Still, we are in need of a solution which works in a more decentralised_ _setting, that is, even when no intermediate peers or "always-online nodes" are available, we want group encryption to _always_ work, even when your node is running on a smartphone.
+Shared Nodes, Delivery Services, Caching Layers, or however you want to call them, are already implemented and successfully used and deployed in production. Still, we are in need of a solution which works in a more decentralised setting, that is, even when no intermediate peers or "always-online nodes" are available, we want group encryption to _always_ work, even when your node is running on a smartphone.
 
 ## Exciting developments
 
