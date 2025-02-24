@@ -92,6 +92,7 @@
   --pale-yellow: #efefaa;
   --gray-light: #434343;
   --gray: #ddd;
+  --gray-dark: #555;
   --white: #efefef;
 }
 
@@ -106,13 +107,14 @@ body {
 
 img {
   width: 100%;
+  border-radius: 10px;
 }
 
 p {
   margin: 0;
   padding: 0;
   font-size: 19px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 p + p {
@@ -165,6 +167,11 @@ h2 {
   text-decoration-thickness: 2px;
 }
 
+h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
 pre,
 code {
   font-family: "IBM Plex Mono";
@@ -173,19 +180,31 @@ code {
 }
 
 code {
+  font-size: 16px;
   display: inline-block;
   background-color: var(--white);
-  padding: 2px 10px;
+  padding: 1px 10px;
   border-radius: 10px;
 }
 
 blockquote {
   margin: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border-left: 5px solid var(--gray-dark);
 }
 
 blockquote p {
   font-size: 17px;
   font-style: italic;
+  color: var(--gray-dark);
+}
+
+blockquote code {
+  font-size: 15px;
+  background-color: var(--white);
+  padding: 3px;
 }
 
 ul {
@@ -286,7 +305,7 @@ header {
 
 .libraries li {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .libraries a {
@@ -324,6 +343,7 @@ header {
   font-size: 20px;
   letter-spacing: 1px;
   margin-bottom: 7px;
+  margin-top: 0;
 }
 
 .project p {
@@ -350,6 +370,10 @@ header {
   display: block;
   padding: 12px 20px;
   color: var(--white);
+}
+
+.post h3 {
+  margin: 0;
 }
 
 .post:hover {
