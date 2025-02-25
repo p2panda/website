@@ -184,7 +184,7 @@ The 2SM protocol is well described in the [DCGKA paper](https://eprint.iacr.org/
 
 ![2SM](/assets/images/250224-2sm.png)
 
-> Panda uses 2SM to securely deliver an "Update Key" to another member, the Jellyfin. Panda uses the Public Key of Jellyfin to encrypt this information. They learned about that Public Key from previous 2SM iterations. Next to the "Update Key" Panda will also send them new key material for the next, future 2SM iteration. This is the special trick of this protocol!
+> Panda uses 2SM to securely deliver an "Update Key" to another member, the Jellyfish. Panda uses the Public Key of Jellyfin to encrypt this information. They learned about that Public Key from previous 2SM iterations. Next to the "Update Key" Panda will also send them new key material for the next, future 2SM iteration. This is the special trick of this protocol!
 
 For encrypting the key towards each member a [Hybrid Public-Key Encryption Scheme](https://www.franziskuskiefer.de/p/tldr-hybrid-public-key-encryption/) (HPKE) is used with _DHKEM\_X25519_, _HKDF\_SHA256_ and _AEAD\_AES\_256_GCM_ as parameters. Since we only use the secrets for key agreement once per iteration we can make 2SM forward secure.
 
