@@ -4,17 +4,17 @@ title: "Local-First group- and message encryption in p2panda"
 subtitle: "Insights, learnings and design from our research and implementation"
 ---
 
-With the generous support of [NLNet](https://nlnet.nl/project/P2Panda-groups/) and a pending audit by [Radically Open Security](https://www.radicallyopensecurity.com/) we're aiming at releasing our Rust crate `p2panda-group` towards Spring 2025!
+With the generous support of [NLNet](https://nlnet.nl/project/p2panda-encryptions/) and a pending audit by [Radically Open Security](https://www.radicallyopensecurity.com/) we're aiming at releasing our Rust crate `p2panda-encryption` towards Spring 2025!
 
 This library will offer group encryption compatible with any data type, encoding format or transport, made for p2p applications which do not rely on constant internet connectivity. Similar to our other crates, we aim to make our implementation independent of the rest of [p2panda](https://p2panda.org) while providing optional "glue code" to integrate it in into the larger p2panda ecosystem. With this design we're adding another building block for secure and private p2p applications to our p2panda collection.
 
-`p2panda-group` manages group membership with a [Conflict-Free Replicated Data-Type](https://mattweidner.com/2023/09/26/crdt-survey-1.html) (CRDT) and two different group key-agreement and encryption schemes. The first scheme we simply call **"Data Encryption"**, allowing peers to encrypt any data with a secret, symmetric key for a group. This will be useful for building applications where users who enter a group late will still have access to previously created content, for example private knowledge or wiki applications or a booking tool for rehearsal rooms. A member will not learn about any newly created data after removing them from the group since the key gets rotated on member removal or manual key update. This should accommodate for many use-cases in p2p applications which rely on basic group encryption with post-compromise security (PCS) and forward secrecy (FS) during [key agreement](https://en.wikipedia.org/wiki/Key-agreement_protocol). 
+`p2panda-encryption` manages group membership with a [Conflict-Free Replicated Data-Type](https://mattweidner.com/2023/09/26/crdt-survey-1.html) (CRDT) and two different group key-agreement and encryption schemes. The first scheme we simply call **"Data Encryption"**, allowing peers to encrypt any data with a secret, symmetric key for a group. This will be useful for building applications where users who enter a group late will still have access to previously created content, for example private knowledge or wiki applications or a booking tool for rehearsal rooms. A member will not learn about any newly created data after removing them from the group since the key gets rotated on member removal or manual key update. This should accommodate for many use-cases in p2p applications which rely on basic group encryption with post-compromise security (PCS) and forward secrecy (FS) during [key agreement](https://en.wikipedia.org/wiki/Key-agreement_protocol). 
 
 The second scheme is **"Message Encryption"**, offering a forward-secure (FS) messaging ratchet, similar to [Signal's Double Ratchet algorithm](https://signal.org/docs/specifications/doubleratchet/). Since secret keys are always generated for _each_ message, a user can not easily learn about previously created messages when getting hold of such key. We believe that the latter scheme will be used in more specialised applications, for example p2p group chats, as strong forward-secrecy comes with it's own UX requirements, but we are excited to offer a solution for both worlds, depending on the application's needs.
 
 Together with our work towards access control we're at the end of a longer research and implementation phase and we're excited to publish a solution to secure data encryption and messaging in p2panda soon.
 
-This blog post is the first announcement of `p2panda-group` and we want to share our insights, learnings and design from this research and implementation phase.
+This blog post is the first announcement of `p2panda-encryption` and we want to share our insights, learnings and design from this research and implementation phase.
 
 ## Encryption in p2p applications
 
@@ -82,7 +82,7 @@ For p2panda itself we are undecided yet if we will follow the Willow path (using
 
 Like this it will be possible to protect all other information, including public keys, signatures etc. if necessary. This doesn't come for free and puts more pressure on other parts of the system (validation, buffering, ordering, etc.).
 
-Because of the generic nature of `p2panda-group` we will not dictate how metadata is treated in your data-type, as this is ultimately a routing, sync and application concern. However we propose an off-the-shelf solution which will find a compromise when integrating with the other p2panda crates, header extensions our multi-writer- and append-only log data types.
+Because of the generic nature of `p2panda-encryption` we will not dictate how metadata is treated in your data-type, as this is ultimately a routing, sync and application concern. However we propose an off-the-shelf solution which will find a compromise when integrating with the other p2panda crates, header extensions our multi-writer- and append-only log data types.
 
 ### Post-compromise security (PCS)
 
@@ -94,7 +94,7 @@ In a decentralised setting this information spreads slower, thus leaving the gro
 
 Members who learned about the removal are already secure and can safely continue to communicate; there is no need for the whole group to completely heal before others can continue.
 
-One solution is to have always-online nodes around which help spreading this sort of information faster. Additionally we can make the key rotation more efficient, which means that the group in itself needs less messaging round-trips before being healed. In `p2panda-group` we are using the 2SM Key-Agreement Protocol, as proposed in the DCGKA paper, which optimises the group healing process to `O(n)` steps instead of `O(n^2)`. In TreeKEM based systems we can rotate the keys in `O(log(n))` steps so the group can heal even faster.
+One solution is to have always-online nodes around which help spreading this sort of information faster. Additionally we can make the key rotation more efficient, which means that the group in itself needs less messaging round-trips before being healed. In `p2panda-encryption` we are using the 2SM Key-Agreement Protocol, as proposed in the DCGKA paper, which optimises the group healing process to `O(n)` steps instead of `O(n^2)`. In TreeKEM based systems we can rotate the keys in `O(log(n))` steps so the group can heal even faster.
 
 ### Forward secrecy (FS)
 
@@ -112,7 +112,7 @@ Another solution is to rely on always-online and trusted key servers which maint
 
 [Puncturable Pseudo-Random Functions ](https://profetproject.github.io/blog/pe_part2/)(PPRF) can help with preventing replay attacks where the security of a user gets weakened by making them "unknowingly" re-use the same one-time pre-key. This secures the owner of the pre-keys, but doesn't solve eventual consistency of the senders, as they will not learn which message the receiver accepted first and which messages they rejected.
 
-In `p2panda-group` we provide two different encryption schemes with variable strength of forward secrecy for different scenarios: "Message Encryption" gives strong forward secrecy like the Signal protocol and "Data Encryption" gives configurable forward secrecy during key agreement but no forward secrecy for application data itself - as members who join a group late are allowed to decrypt previously created data.
+In `p2panda-encryption` we provide two different encryption schemes with variable strength of forward secrecy for different scenarios: "Message Encryption" gives strong forward secrecy like the Signal protocol and "Data Encryption" gives configurable forward secrecy during key agreement but no forward secrecy for application data itself - as members who join a group late are allowed to decrypt previously created data.
 
 We believe there's a place for applications in p2p with strong forward secrecy requirements with well-done UX, for example local-first messengers or applications using state-based CRDTs where no message history is required. We also can imagine applications running with both encryption schemes at the same time! Imagine a tool to organise your collective's shared items where every member needs to have access to past records and thus encrypted with "Data Encryption", while private messages between members are encrypted with stronger "Message Encryption".
 
@@ -144,7 +144,7 @@ The cool thing with this approach is that we:
 3. Have a cryptographically secure way (through the unique hash function) to verify that we really observed one operation and that the authenticity of each operation is given, as they are signed by the author.
 4. Bonus point: Gain almost all the concurrency guarantees we need from this data type because a DAG can be understood as a CRDT in itself!
 
-In our concrete `p2panda-group` Rust implementation we will not prescribe a specific ordering technique, so as to not tie developers too closely to our data types. Many p2p applications already have their own solutions for handling concurrency and, if not, we have these developers covered with our `p2panda-core` crate, providing the DAG data type, and causally ordered, "dependency checked" and buffered operation streams in `p2panda-stream`.
+In our concrete `p2panda-encryption` Rust implementation we will not prescribe a specific ordering technique, so as to not tie developers too closely to our data types. Many p2p applications already have their own solutions for handling concurrency and, if not, we have these developers covered with our `p2panda-core` crate, providing the DAG data type, and causally ordered, "dependency checked" and buffered operation streams in `p2panda-stream`.
 
 ### Group Management CRDT
 
@@ -156,7 +156,7 @@ The hash graph, mentioned above, can be used to verify if someone was allowed to
 
 This approach solves mostly all questions around managing group membership and checking permissions, except we need to be aware of some "special" concurrent cases. For example, what happens if two members remove each other at the same time or if a member got added by someone who was concurrently removed?
 
-In `p2panda-group` we provide a default CRDT implementation which takes care of all of these situations by following a "strong removal" approach. This means that anyone who is removed can't add any other member, even when they have been removed at the same logical time as when they added someone. If two members remove each other at the same time, they will both leave the group. This approach accounts for situations where it is more secure to remove everyone (for example, an attacker removing the admin while the admin tries to remove the attacker) and rely on social processes to re-establish a trusted group setting by re-adding members or starting a new group in worst case.
+In `p2panda-encryption` we provide a default CRDT implementation which takes care of all of these situations by following a "strong removal" approach. This means that anyone who is removed can't add any other member, even when they have been removed at the same logical time as when they added someone. If two members remove each other at the same time, they will both leave the group. This approach accounts for situations where it is more secure to remove everyone (for example, an attacker removing the admin while the admin tries to remove the attacker) and rely on social processes to re-establish a trusted group setting by re-adding members or starting a new group in worst case.
 
 ![Group CRDT](/assets/images/250224-group-crdt.png)
 
@@ -176,7 +176,7 @@ Key agreement in p2panda can be described in two phases, a first "key handshake"
 
 > The 2SM key agreement protocol used by p2panda combines a X3DH key handshake with subsequent key rotations realised with a simpler public key encryption scheme (HPKE).
 
-In `p2panda-group` we randomly generate a secret key we can later use as the symmetrical secret to encrypt to all members in the group or to derive the message ratchet "root chain key" for one member.
+In `p2panda-encryption` we randomly generate a secret key we can later use as the symmetrical secret to encrypt to all members in the group or to derive the message ratchet "root chain key" for one member.
 
 To make a group aware of a new secret key we could encrypt the secret pairwise with [public-key encryption](https://en.wikipedia.org/wiki/Public-key_cryptography) (PKE) towards each member of the group, resulting in an `O(n^2)` overhead as every member needs to share their secret with every other. The DCGKA paper proposes an alternative approach which they call "Two-Party Secure Messaging Protocol" (2SM) where a member prepares the next encryption keys not only for themselves but also for the other party, resulting in a more optimal `O(n)` cost when rotating keys. This allows us to "heal" the group in less steps after a member is removed.
 
@@ -198,7 +198,7 @@ For our "Message Encryption" scheme we make one-time pre-keys mandatory during X
 
 ### p2panda Data Encryption
 
-In `p2panda-group` we implement a simple and secure, symmetrical key encryption for application data with the forward-secure 2SM key-agreement protocol and post-compromise security on manual key-rotation or member removal.
+In `p2panda-encryption` we implement a simple and secure, symmetrical key encryption for application data with the forward-secure 2SM key-agreement protocol and post-compromise security on manual key-rotation or member removal.
 
 Every member in the group uses the same secrets to encrypt the data. During key agreement we include a list of all previously used secrets and send it to the new members so they will be able to decrypt all previously created data even when they entered the group later. It would be possible to use a more efficient way of storing previously used keys in the future, for example in form of a [Cryptree](https://raw.githubusercontent.com/ianopolous/Peergos/master/papers/wuala-cryptree.pdf).
 
@@ -234,9 +234,9 @@ These cases are handled as part of the DCGKA protocol specification from the [pa
 
 ### Integration with p2panda stack
 
-Since our implementation of `p2panda-group` is in Rust, we express many parts of the group encryption in the form of "traits" or generic interfaces, allowing  developers to adjust certain parts. For example, customising the group management CRDT for their own needs or using a different key agreement protocol while keeping the same encryption algorithm. We will also offer a way for developers to deliver their own storage solutions for secret key material and group state.
+Since our implementation of `p2panda-encryption` is in Rust, we express many parts of the group encryption in the form of "traits" or generic interfaces, allowing  developers to adjust certain parts. For example, customising the group management CRDT for their own needs or using a different key agreement protocol while keeping the same encryption algorithm. We will also offer a way for developers to deliver their own storage solutions for secret key material and group state.
 
-`p2panda-group` is agnostic to p2panda itself, no concrete data-types, sync or ordering strategy or transport is assumed by the implementation.
+`p2panda-encryption` is agnostic to p2panda itself, no concrete data-types, sync or ordering strategy or transport is assumed by the implementation.
 
 For use with the rest of p2panda though we will provide Rust `Stream` implementations in `p2panda-stream` for both giving the required causal ordering of group operations and the encryption and decryption of application data or messages itself.
 
@@ -248,6 +248,6 @@ The group membership CRDTs are also very useful outside of the encryption system
 
 ## See you soon and thank you!
 
-As already mentioned, an implementation is currently underway and to-be-released in Spring 2025! You can subscribe to our [RSS feed](https://p2panda.org/feed.xml) for new upcoming posts on our website or follow us on the [Fediverse](https://autonomous.zone/@p2panda) to get informed when `p2panda-group` is ready for use.
+As already mentioned, an implementation is currently underway and to-be-released in Spring 2025! You can subscribe to our [RSS feed](https://p2panda.org/feed.xml) for new upcoming posts on our website or follow us on the [Fediverse](https://autonomous.zone/@p2panda) to get informed when `p2panda-encryption` is ready for use.
 
 We want to especially thank the Cryptographic Engineer and OpenMLS maintainer [Jan Winkelmann](https://keks.cool/) from [Cryspen](https://cryspen.com) for answering our questions around the cryptographic parts of our implementation and the Researcher [Erick Lavoie](https://dmi.unibas.ch/en/persons/lavoie-erick/) for giving advice and ideas for efficient group membership CRDT designs. We took inspiration from work done by Abhilash Mendhe during his Master studies at University of Basel, under the guidance of Erick. We also want to thank the authors of the "[Key Agreement for Decentralized Secure Group Messaging with Strong Security Guarantees](https://eprint.iacr.org/2020/1281.pdf)" paper for giving a strong foundation of future p2p group encryption solutions and lastly [NLNet](https://nlnet.nl/) for supporting this adventure and our security audit of [Radically Open Security](https://www.radicallyopensecurity.com/).
