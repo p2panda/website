@@ -126,6 +126,10 @@ p a {
   border-bottom: 2px solid var(--baby-blue);
 }
 
+p a:has(> code) {
+  border-bottom: 0;
+}
+
 strong {
   font-weight: 600;
   font-style: normal;
@@ -207,12 +211,14 @@ blockquote code {
   padding: 3px;
 }
 
+ol,
 ul {
   padding: 20px;
 }
 
 li {
   font-size: 19px;
+  line-height: 1.6;
 }
 
 li + li {
