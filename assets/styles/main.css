@@ -190,6 +190,7 @@ code {
   padding: 1px 10px;
   border-radius: 10px;
   overflow: scroll;
+  vertical-align: bottom;
 }
 
 blockquote {
