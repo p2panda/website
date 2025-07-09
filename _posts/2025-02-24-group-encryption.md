@@ -4,7 +4,7 @@ title: "Local-First group- and message encryption in p2panda"
 subtitle: "Insights, learnings and design from our research and implementation"
 ---
 
-With the generous support of [NLNet](https://nlnet.nl/project/p2panda-encryptions/) and a pending audit by [Radically Open Security](https://www.radicallyopensecurity.com/) we're aiming at releasing our Rust crate `p2panda-encryption` towards Spring 2025!
+With the generous support of [NLNet](https://nlnet.nl/project/P2Panda/) and a pending audit by [Radically Open Security](https://www.radicallyopensecurity.com/) we're aiming at releasing our Rust crate `p2panda-encryption` towards Spring 2025!
 
 This library will offer group encryption compatible with any data type, encoding format or transport, made for p2p applications which do not rely on constant internet connectivity. Similar to our other crates, we aim to make our implementation independent of the rest of [p2panda](https://p2panda.org) while providing optional "glue code" to integrate it in into the larger p2panda ecosystem. With this design we're adding another building block for secure and private p2p applications to our p2panda collection.
 
