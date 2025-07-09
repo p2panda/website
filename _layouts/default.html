@@ -1,19 +1,21 @@
+{% capture title %}{% if page.title %}{{ page.title }} ~ {% endif -%}{{ site.title }}{% endcapture -%}
+{% capture description %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else -%}{{ site.tagline }}{% endif -%}{% endcapture -%}
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=1">
-    <title>{% if page.title %}{{ page.title }} ~ {% endif -%} {{ site.title }}</title>
-    <meta name="description" content="{{ site.tagline }}" />
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}" />
     <link rel="stylesheet" href="{{ "./assets/styles/main.css?v=" | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ "./assets/styles/highlight.css?v=" | append: site.github.build_revision | relative_url }}">
     <link rel="icon" href="{{ "./assets/images/deepsea-panda.svg" | relative_url }}">
-    <meta name="description" content="{{ site.tagline }}" />
+    <meta name="description" content="{{ description }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ site.title }}" />
-    <meta name="og:description" content="{{ site.tagline }}" />
-    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta name="og:description" content="{{ description }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
     <meta property="og:image" content="{{ "./assets/images/share.png" | absolute_url }}" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1800" />
@@ -29,7 +31,7 @@
         <p class="tagline">{{ site.tagline }}</p>
       </header>
       <main>
-        {{ content }}
+        {{ content -}}
       </main>
       <footer>
         <p><em>This project has received funding from the European Union’s Horizon 2020 research and innovation programme within the framework of the NGI-POINTER Project funded under grant agreement No 871528, NGI-ASSURE No 957073 and NGI0-ENTRUST No 101069594.</em></p>
