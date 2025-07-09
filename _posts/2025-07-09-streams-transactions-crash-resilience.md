@@ -14,6 +14,10 @@ A classic example: Parrot wants to send one apple to Horse. Parrot starts the tr
 
 > An example of a failed transaction where Parrot will loose an apple and Horse will never receive it.
 
+We never want to end up in a situation where a failure like that leads to the app hanging in an invalid state. Trying to recover a "broken" peer is especially hard when doing things without any central coordination.
+
+This blog post is about the strategies and design ideas we're exploring in p2panda to make p2p applications resilient to critical failures, for both system- and application layers.
+
 ## Processing system- and application data
 
 Processes usually change their internal state when receiving new data or input. Peers observe messages on a network and process them based on a set of rules. Message processing results in a new state which then gets moved into a store or database.
