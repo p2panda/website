@@ -385,6 +385,14 @@ header {
   color: var(--baby-blue);
 }
 
+/* Code */
+
+.language-rust code {
+  line-height: 1.4;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 /* Footer */
 
 footer {
