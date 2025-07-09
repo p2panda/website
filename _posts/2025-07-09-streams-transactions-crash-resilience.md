@@ -8,7 +8,7 @@ In peer-to-peer applications, processes can crash, fail or be interrupted at any
 
 Why are crashes dangerous for applications and especially peer-to-peer ones?
 
-A classic example: Parrot wants to send one apple to Horse. Parrot starts the transaction and removes an apple from their store. Horse receives the apple and adds it to their store. If one of the processes crashes on either Parrot's or Horse’s side, we might end up with a situation where Parrot's state has one less apple and Horse's has none.
+A classic example: Parrot wants to send one apple to Horse. Parrot starts the transaction and removes an apple from their store. Horse receives the apple and adds it to their store. If one of the processes crashes on either Parrot's or Horse's side, we might end up with a situation where Parrot's state has one less apple and Horse's has none.
 
 ![Parrot and Horse's transaction example](/assets/images/250709-parrot-horse.png)
 
@@ -42,7 +42,7 @@ Information required to coordinate these system-related data-types or protocols 
 
 Whenever a p2panda Operation arrives at a peer we need to separate the system- and application concerns and handle them one after another. First we look into the Header, process it and adjust our system state accordingly. Has this author been invited to an encrypted group context? Is this author allowed to write to this document? Did this Operation arrive out-of-order and do we need to wait before we can proceed with it? Can we decrypt the Body?
 
-After all of the system processing and checks have taken place, we can finally "forward" the Operation to the application layer which is controlled by the developers who want to build anything on top. Here we can only guess what will happen, but let’s assume that some sort of processing will also be required and whatever comes out of it will land in some application state, potentially persisted in a database like SQLite.
+After all of the system processing and checks have taken place, we can finally "forward" the Operation to the application layer which is controlled by the developers who want to build anything on top. Here we can only guess what will happen, but let's assume that some sort of processing will also be required and whatever comes out of it will land in some application state, potentially persisted in a database like SQLite.
 
 Our goal is to allow developers to combine and "stack up" different processing flows for their individual application needs. Does your application need permission management? Add `p2panda-auth` to the processing pipeline!
 
@@ -56,7 +56,7 @@ While we're building completely p2panda-independent data-types and protocols, fo
 
 The name and APIs are still in flux but we believe that this gives the most framework-independence and flexibility while allowing application developers to focus primarily on application-level concerns.
 
-We’ve experimented with Rust [`Stream`](https://docs.rs/futures-core/latest/futures_core/stream/trait.Stream.html) to express a "flexible" middleware API in our `p2panda-stream` crate but unfortunately Rust's strict type system and exploding complexity and boilerplate around nested async calls and generics makes the [use of it not enjoyable](https://hachyderm.io/@fasterthanlime/112898470217396730), and prone to bugs. Currently we're exploring a more pragmatic approach with slightly less flexibility and significant better readability and ease of usage.
+We've experimented with Rust [`Stream`](https://docs.rs/futures-core/latest/futures_core/stream/trait.Stream.html) to express a "flexible" middleware API in our `p2panda-stream` crate but unfortunately Rust's strict type system and exploding complexity and boilerplate around nested async calls and generics makes the [use of it not enjoyable](https://hachyderm.io/@fasterthanlime/112898470217396730), and prone to bugs. Currently we're exploring a more pragmatic approach with slightly less flexibility and significant better readability and ease of usage.
 
 Why all of this introduction into the p2panda processing pipeline when talking about crash resilience? We see now that there are multiple state changes required before we even arrive at the application layer. In addition, we _only_ really want to commit to the new state if the application finally says: "Yes, this operation was valid and everything is ok". To achieve this guarantee we need to be able to express the processing of an operation across both layers as one single atomic transaction.
 
@@ -148,7 +148,7 @@ tx.commit().await?;
 
 There are different possible approaches to design state handling around transactions and our traits. We're exploring multiple options right now, for example *pure functions*.
 
-Pure functions are [functions which do not have any side-effects](https://en.wikipedia.org/wiki/Pure_function); they will never write to a database when being called and instead return a new state object. The combination of transactions and Rust’s strict borrow checker allows us to express state handling quite neatly (and we did it a lot inside our `p2panda-auth` and `p2panda-encryption` crates), for example:
+Pure functions are [functions which do not have any side-effects](https://en.wikipedia.org/wiki/Pure_function); they will never write to a database when being called and instead return a new state object. The combination of transactions and Rust's strict borrow checker allows us to express state handling quite neatly (and we did it a lot inside our `p2panda-auth` and `p2panda-encryption` crates), for example:
 
 ```rust
 // Retrieve current group state from database.
@@ -167,7 +167,7 @@ It is important to note that after a process has crashed and restarted, we want 
 
 As part of `p2panda-stream` (the stackable middleware pipeline) we're planning on integrating a **stream controller** which allows re-playing "unprocessed" operations by default and manually re-playing all or a range of operations from a certain point (defined by logical or wall-clock time) or "topic" (grouping operations defined by the application) when required.
 
-The stream controller can be neatly combined with atomic transactions. Every operation needs to be "acknowledged" by the application layer at the end of every processing. This signals to the controller that the operation can now be marked as "processed". Now we can finally commit the atomic transaction with all state changes caused by that operation and we don’t need to re-play it whenever the process starts again.
+The stream controller can be neatly combined with atomic transactions. Every operation needs to be "acknowledged" by the application layer at the end of every processing. This signals to the controller that the operation can now be marked as "processed". Now we can finally commit the atomic transaction with all state changes caused by that operation and we don't need to re-play it whenever the process starts again.
 
 Processors usually need to have [idempotency](https://en.wikipedia.org/wiki/Idempotence) guarantees; this can be difficult to reason about when the codebases and data types get complex. Processing an operation twice might lead to invalid state (for example, Horse ending up with two apples when only one was sent). By combining transactions with a stream controller we can guarantee that the state produced by processing an operation is only ever committed *once*.
 
