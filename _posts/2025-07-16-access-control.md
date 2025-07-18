@@ -30,7 +30,7 @@ these scenarios.
 
 In decentralised or peer-to-peer systems we also need to keep in mind that data travels between devices in a network. Since a direct connection to a particular peer is not always possible, we may wish for some intermediate peers to be able to assist with passing data through the network. Since those peers may be untrusted, or may simply not be the intended recipient of some data, it's useful to have a means of allowing the right to replicate without the write to read.
 
-This is where encryption comes into the picture; it allows us to prevent unauthorised reading of data. The ability to read is thus mapped to the ability to decrypt. In systems with connection-based replication protocols we can rely on a seperate access control level to define who is allowed to receive data (even though that data is still encrypted). When connecting to peer, before we begin sending any requested data, we first check whether that peer has pull-access. If not, we refrain from fulfilling the request.
+This is where encryption comes into the picture; it allows us to prevent unauthorised reading of data. The ability to read is thus mapped to the ability to decrypt. In systems with connection-based replication protocols we can rely on a seperate access control level to define who is allowed to receive data (even though that data is still encrypted). When connecting to a peer, before we begin sending any requested data, we first check whether that peer has pull-access. If not, we refrain from fulfilling the request.
 
 ![Encrypted Data Pull and Read](/assets/images/250716-pull-read.png)
 
