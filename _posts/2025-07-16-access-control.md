@@ -20,11 +20,7 @@ these scenarios.
 
 ![Encrypted Data Read and Write](/assets/images/250716-read-write.png)
 
-> Sloth has written a list of their favourite activities: sleeping,
-> cuddling and climbing. Owl has read-access to the document; they can read
-> the list that Sloth has authored but not make any changes. Cat, on the
-> other hand, has write-access and decides to replace "climbing" with
-> "meowing".
+> Sloth has written a list of their favourite activities: sleeping, cuddling and climbing. Owl has read-access to the document; they can read the list that Sloth has authored but not make any changes. Cat, on the other hand, has write-access and decides to replace "climbing" with "meowing".
 
 ### Replication
 
@@ -34,12 +30,7 @@ This is where encryption comes into the picture; it allows us to prevent unautho
 
 ![Encrypted Data Pull and Read](/assets/images/250716-pull-read.png)
 
-> Sloth has write-access to a list of activities: sleeping, cuddling and
-> climbing. Beetle only has pull-access to the list, meaning that they can
-> receive and pass-on that data but cannot decrypt it for reading. Beetle
-> replicates the data from Sloth and forwards it to Shark. Shark has
-> read-access; they're able to decrypt the data and read the list that
-> Sloth authored.
+> Sloth has write-access to a list of activities: sleeping, cuddling and climbing. Beetle only has pull-access to the list, meaning that they can receive and pass-on that data but cannot decrypt it for reading. Beetle replicates the data from Sloth and forwards it to Shark. Shark has read-access; they're able to decrypt the data and read the list that Sloth authored.
 
 ### Intuitive & Customisable
 
@@ -51,9 +42,9 @@ There are several design approaches to meeting the requirements we outlined abov
 
 ### Capability-Based Access Control
 
-Capability-based access control systems rely on secure authorisation tokens and use delegation chains to verify which actors have access to any particular set of data. For example, I may issue a token granting read access to my photo-sharing folder with a relative. That token is then handed over as proof of access when my relative tries to read the folder. Such systems allow delegation of received access; an actor can pass on any received capability to other actors.
+Capability-based access control systems rely on secure authorisation tokens and use delegation chains to verify which actors have access to any particular set of data. For example, I may issue a token granting read access to my photo-sharing folder with a relative. That token is then handed over as proof of access when my relative tries to read the folder. Such systems allow delegation of received access; an actor can pass on any received capability to other actors. [Meadowcap](https://willowprotocol.org/specs/meadowcap/index.html) from the Willow team is a good example of a pure capability-based access control system.
 
-Delegations will most often include an expiry date, the expectation being that if access should be maintained a new token will be issued before the previous one has expired. Some systems include the ability to retroactively revoke a previously-delegated access. In such cases, all dependent delegations will also be revoked. The [Meadowcap](https://willowprotocol.org/specs/meadowcap/index.html) capability system from the Willow team offers an excellent example of such a system.
+Delegations will most often include an expiry date, the expectation being that if access should be maintained a new token will be issued before the previous one has expired. Some systems include the ability to retroactively revoke a previously-delegated access. In such cases, all dependent delegations will also be revoked.
 
 ### Distributed Access Control Lists
 
@@ -103,8 +94,6 @@ Each member in a p2panda auth group can either be an individual or a group. Indi
 ![Nested Group Graph](/assets/images/250716-nested-group-graph.jpg)
 
 > Here we have another visualisation of a DAG of group membership operations, this time illustrating a nested group scenario. A group 'T' is created with a single initial member: individual A with manage-access. Separately, a group D is created with two initial members: individuals L (manage-access) and M (write-access). Individual A adds individual B to group 'T' with manage-access. Individual B then adds individual C to group 'T' with read-access. The last operation in the graph points the creation of the 'D' group as a dependency and adds that group to group 'T' with manage-access. A "Group Members" table with a green background shows five members: A: manage, B: manage, C: read, L: manage and M: write.
-
-NOTE(glyph): Shouldn't group D also be a member of T in the green table?
 
 ## Challenges
 
