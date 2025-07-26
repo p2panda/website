@@ -8,10 +8,7 @@ Having just released the first version of our [p2panda-auth](https://crates.io/c
 
 ## System Requirements
 
-Before diving into the details of the system we've implemented, let's first discuss why we might want an access control system? Broadly speaking, access control gives us a way to define **who** can interact with some specific data and **how** they can interact with the data. The "who" can be thought of as an actor; this might be a cryptographic keypair mapping to a single person or it may be a keypair which represents one of several devices controlled by a single person. An actor may
-even be a group which is itself composed of several other actors.
-
-> @sam I think in general access-control systems don't bake in the idea of groups, this is already quite opinionated (maybe most closely related to Role-based Access-control systems, which some people hate, i think...). I haven't read on, so maybe it's important that we already introduce groups here, for the flow of the article, but if it's not need maybe it should come later as we get more into our opinionated approach
+Before diving into the details of the system we've implemented, let's first discuss why we might want an access control system? Broadly speaking, access control gives us a way to define **who** can interact with some specific data and **how** they can interact with the data. The "who" can be thought of as an actor; this might be a cryptographic keypair mapping to a single person or it may be a keypair which represents one of several devices controlled by a single person. An actor may even be a group which is itself composed of several other actors.
 
 ### Reading & Writing
 
