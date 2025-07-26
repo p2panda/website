@@ -49,7 +49,7 @@ An alternative approach to capability-based systems is the Distributed Access Co
 
 ## Design & Implementation
 
-We've ended up with a generic decentralised group management system with fine-grained, per-member permissions. Once a group has been created, members can be added, removed, promoted and demoted.
+We've ended up with a generic decentralised group management system with fine-grained, per-member permissions. Once a group has been created, members can be added, removed, promoted and demoted. A group member can either be an individual (usually represented by a single public key) or another group. Assigned access levels can be restricted with application specific conditions.
 
 ### Access Levels
 
