@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Access Control in Decentralised Systems"
-subtitle: TODO
+subtitle: "Design and implementation overview of p2panda-auth"
 ---
 
 Having just released the first version of our [p2panda-auth](https://crates.io/crates/p2panda-auth) crate, it seems like the right time to write about access control in decentralised systems. In the process, we'll share an overview of the system we've designed - as well as a discussion of some of the technical challenges involved in implementing peer-to-peer group management and access control. We're grateful to [NLnet](https://nlnet.nl/project/P2Panda-groups/) for supporting us in this work.
@@ -137,23 +137,23 @@ Another open question which emerged during our work is how to achieve access con
 
 How does our approach compare with other decentralised access control systems?
 
-### [localfirst/auth](https://github.com/local-first-web/auth)
+### localfirst/auth
 
-The TypeScript library localfirst/auth use groups (teams) to define access-control and encryption boundaries. In their own words:
+The TypeScript library [localfirst/auth](https://github.com/local-first-web/auth) uses groups ("teams") to define access-control and encryption boundaries. In their own words:
 
 > This library provides a Team class, which wraps the signature chain and encapsulates the team's members, devices, and roles. With this object, you can invite new members and manage their permissions.
 
-Group membership is managed using the operation-based CRDT library [CRDX](https://github.com/local-first-web/auth/tree/main/packages/crdx). Roles can be dynamically added to a group, a members access-level is inferred from the roles they are assigned. Members assigned the special "admin" role can perform actions which change the group membership (add/remove members, create/assign/remove roles). New members are invited to the group using [Seitan Tokens](https://book.keybase.io/docs/teams/seitan).
+Group membership is managed using the operation-based CRDT library [CRDX](https://github.com/local-first-web/auth/tree/main/packages/crdx). Roles can be dynamically added to a group; a member's access-level is inferred from the roles they are assigned. Members assigned the special "admin" role can perform actions which change the group membership (ie. add/remove members, create/assign/remove roles). New members are invited to the group using [Seitan Tokens](https://book.keybase.io/docs/teams/seitan).
 
-Our approach is similar in how group state is managed using an operation-based CRDT, we were quite influenced by the how localfirst/auth allows custom approaches to conflict resolution. We differ in our use of nested-groups and access-levels with associated conditions (rather than roles) to describe a group members capabilities, and the fact we do not use invitation tokens.
+Our approach is similar in how group state is managed using an operation-based CRDT. We were quite influenced by the way in which localfirst/auth allows custom approaches to conflict resolution. We differ in our use of nested-groups and access-levels with associated conditions (rather than roles) to describe a group member's capabilities. Another difference is that we do not use invitation tokens.
 
-### [Keyhive](https://www.inkandswitch.com/keyhive/notebook/)
+### Keyhive
 
-The Ink & Switch project Keyhive also uses a groups abstraction for their integration of access-control and encryption systems into the automerge CRDT library. They describe their approach as using "convergent capabilities", which are intended to be similar to object-capabilities while being partition tolerant, and therefore suitable for use with localfirst/offline first applications and CRDTs in general. Group membership is derived from delegation chains, any member can delegate the capability they hold to another actor. A previously delegated capability can be revoked by the original delegator, or any member with special "manage" authority.
+The Ink & Switch project [Keyhive](https://www.inkandswitch.com/keyhive/notebook/) also uses a groups abstraction for their integration of access-control and encryption systems into the [automerge](https://automerge.org/) CRDT library. They describe their approach as using "convergent capabilities", which are intended to be similar to object-capabilities while being partition-tolerant and therefore suitable for use with local-first/offline-first applications and CRDTs in general. Group membership is derived from delegation chains; any member can delegate the capability they hold to another actor. A previously-delegated capability can be revoked by the original delegator or any member with special "manage" authority.
 
-Our approach uses similar access-levels with attached conditions, and also makes uses of nested-groups. We differ in the fact that we only allow "manager" members to add new members to a group (rather than any member being able to delegate their own capability). That said, it's still possible for users to follow a similar delegation approach using nested groups with [POLA](https://en.wikipedia.org/wiki/Principle_of_least_privilege).
+Our approach uses similar access-levels with attached conditions and also makes uses of nested-groups. We differ in the fact that we only allow "manager" members to add new members to a group (rather than any member being able to delegate their own capability). That said, it's still possible for users to follow a similar delegation approach using nested groups with the [Principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) (POLA).
 
-_Both localfirst/auth and Keyhive use something similar to a [Cryptree](https://ieeexplore.ieee.org/document/4032481) for data encryption, this is different from our approach which can be read about in detail [here](https://p2panda.org/2025/02/24/group-encryption.html)._
+Both localfirst/auth and Keyhive use something similar to a [Cryptree](https://ieeexplore.ieee.org/document/4032481) for data encryption. This is different from our approach which can be read about in detail [here](https://p2panda.org/2025/02/24/group-encryption.html).
 
 ## What's next?
 
