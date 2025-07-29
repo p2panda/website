@@ -49,7 +49,8 @@ layout: default
   <section class="post rotate-3">
     <a href="{{ post.url | prepend: site.baseurl }}">
       <h3>✉️ {{ post.title }}</h3>
-      <p>{{ post.date | date: "%d.%m.%y"}} ~ {{ post.subtitle }}</p>
+      <p>{{ post.subtitle }}</p>
+      <span>{{ post.date | date: "%d.%m.%y"}} - {{ post.author }}</span>
     </a>
   </section>
   {% endfor %}

@@ -2,6 +2,7 @@
 layout: post
 title: "Stream Processing, Transactions, Crash Resilience in p2panda"
 subtitle: "Strategies we're exploring to make p2p applications resilient to critical failures"
+author: adz
 ---
 
 In peer-to-peer applications, processes can crash, fail or be interrupted at any point. This occurs not only as a result of losing connectivity with other peers, abruptly ending a stream of data, but also due to the fact that the process itself doesn't run on a stable, highly-available server but on a mobile phone, laptop or other edge device. Whenever the user decides to "swipe up" and move the app into the background, or the operating system decides not to allocate any more resources to the process, we can't guarantee that whatever we started will end well. And of course, despite our best efforts as developers, bugs can always happen.

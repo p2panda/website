@@ -2,6 +2,7 @@
 layout: post
 title:  "Event Streams and Persistence (0.3.0)"
 subtitle: "Bootstrap your network and listen to events"
+author: glyph
 ---
 
 We're excited to share a new release of p2panda, one which is primarily focused on our networking crate but also introduces SQLite persistence and several bug fixes.  
