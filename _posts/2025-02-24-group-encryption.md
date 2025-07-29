@@ -2,6 +2,7 @@
 layout: post
 title: "Local-First group- and message encryption in p2panda"
 subtitle: "Insights, learnings and design from our research and implementation"
+author: adz
 ---
 
 With the generous support of [NLNet](https://nlnet.nl/project/P2Panda/) and a pending audit by [Radically Open Security](https://www.radicallyopensecurity.com/) we're aiming at releasing our Rust crate `p2panda-encryption` towards Spring 2025!

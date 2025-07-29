@@ -2,6 +2,7 @@
 layout: post
 title:  "Anti-Fragile Panda (0.2.0)"
 subtitle: "Now with full offline-first networking support"
+author: glyph
 ---
 
 Today we're happy to announce a new release of p2panda, one which offers exciting improvements to our networking and discovery capabilities.
