@@ -66,7 +66,7 @@ The aforementioned group actions are published as group control operations; each
 
 Membership state for a group is maintained locally using a Causal-Length CRDT based on grow-only sets which allow for efficiently merging states across graph branches. However, it's simplicity does not allow us to fully handle conflicting group states emerging from some concurrent scenarios. In such cases, all operations in the DAG are walked in a depth-first search so that any "bubbles" of concurrent operations may be identified. Resolution rules are then applied to the operations in these bubbles in order to populate a filter of operations to be invalidated. Once the offending operations have been invalidated, any dependent operations are then invalidated in turn.
 
-We have defined the `Resolver` as a Rust trait to allow for multiple implementations with contrasting rulesets for identifying which concurrent operations are to be considered invalid. This approaches arises from the understanding that applications have different requirements around trust and security; some may operate in high-stakes contexts where the most cautious implementation is always preferred, while others may operate in low-stakes contexts without the need for strict conflict resolution. The initial offering of our `p2panda-auth` crate offers a single resolver implementation which we refer to as a "strong removal" resolver. The ruleset is as follows:
+We have defined the `Resolver` as a Rust trait to allow for multiple implementations with contrasting rulesets for identifying which concurrent operations are to be considered invalid. This approache arises from the understanding that applications have different requirements around trust and security; some may operate in high-stakes contexts where the most cautious implementation is always preferred, while others may operate in low-stakes contexts without the need for strict conflict resolution. The initial offering of our `p2panda-auth` crate offers a single resolver implementation which we refer to as a "strong removal" resolver. The ruleset is as follows:
 
 1) Removal or demotion of a manager causes any concurrent actions by that member to be invalidated
 2) Mutual removals, where two managers remove or demote one another concurrently, are not invalidated; both removals are applied to the group state but any other concurrent actions by those members are invalidated
@@ -75,7 +75,7 @@ We have defined the `Resolver` as a Rust trait to allow for multiple implementat
 
 We fully realise, as mentioned before, that this ruleset is not optimal or desirable for all cases. For example, an alternative implementation of the `Resolver` might utilise the seniority of a member to act as a tie-breaker in the case of a mutual removal. In that scenario, the member who was added to the group first would remain in the group and the more recently added member would be removed.
 
-Another scenario: what happens when the only manager of a group is removed or demoted? Is the group state forever frozen? Or are all group members automatically promoted to managers? The flexibility of our approach allows for both options to be catered for. We look forward to further discussions around these different requirement scenarios and would to assist anyone who wishes to implement their own custom resolver for `p2panda-auth`.
+Another scenario: what happens when the only manager of a group is removed or demoted? Is the group state forever frozen? Or are all group members automatically promoted to managers? The flexibility of our approach allows for both options to be catered for. We look forward to further discussions around these different requirement scenarios and we would be available to assist anyone who wishes to implement their own custom resolver for `p2panda-auth`.
 
 ### Debugging Graphs
 
@@ -98,7 +98,7 @@ Each member in a p2panda auth group can either be an individual or a group. Indi
 ### Centralised vs. Decentralised
 
 Group management and access control is relatively straightforward in a centralised context where a server is the single source of truth and all group updates are received in total order. The server "knows" exactly which actions occurred before the others and is able to validate each one before
-updating the group state or allowing access of a specific resource to a member. This means that there can never be conflicting group state (unless in the case of a bug or exploited vulnerability). We don't have such luxuries when building peer-to-peer systems.
+updating the group state or allowing access of a specific resource to a member. This means that there can never be conflicting group states (unless in the case of a bug or exploited vulnerability). We don't have such luxuries when building peer-to-peer systems.
 
 In our world, a peer in the network may receive group updates in any order. To make matters worse, there may be long delays between when a group action is taken and when it's learned about by other peers in a network (this could even take years!). So, unlike centralised systems, we have to rely on partial order of actions (we know that one action happened after another but we don't know exactly when each one happened) to detect concurrent modifications of the group state and then apply specific rules to ensure that all members will eventually converge on the same state.
 
@@ -110,11 +110,11 @@ As we've already mentioned, concurrency brings about some complex and challengin
 
 **Mutual Removal Involving Byzantine Actor**
 
-Penguin is a group manager and promotes Parrot to manager access level. Right afterward, Penguin changes her mind about Parrot and immediately demotes him. Parrot quite enjoys his promotion to manager status and chooses to ignore Penguin's demotion action. As a result, all of Parrot's future actions are technically considered concurrent with Penguin's demotion action. Parrot then goes on to demote all other group members, making him then single authority figure in the group.
+Penguin is a group manager and promotes Parrot to manager access level. Right afterward, Penguin changes her mind about Parrot and immediately demotes him. Parrot quite enjoys his promotion to manager status and chooses to ignore Penguin's demotion action. As a result, all of Parrot's future actions are technically considered concurrent with Penguin's demotion action. Parrot then goes on to demote all other group members, making him then the single authority figure in the group.
 
 ![Concurrent Mutual Removal](/assets/images/250716-concurrent-mutual-removal.png)
 
-> Here we have a Lamport Clock depicting a case of "mutual removal" involving a byzantine actor, as described in the paragraph above.
+> Here we have a Concurrency Diagram depicting a case of "mutual removal" involving a byzantine actor, as described in the paragraph above. Operations on replicas are shown in boxes. Synchronization between replicas is shown with a "Merge" arrow. An operation happens before a later operation if there exists a path between the first and the second, potentially going through merge arrows. If no path exists, then the operations are concurrent.
 
 In this scenario, a third group member (such as Duck) who has received Penguin's demotion of Parrot and Parrot's demotion of Penguin will determine that a concurrent, mutual removal has occurred. As such, they will remove both Penguin and Parrot from the group and roll-back or ignore any subsequent actions by those two members. This ensures that Parrot's nefarious plan is ultimately undone.
 
@@ -126,13 +126,17 @@ Duck creates a group and promotes Penguin to manager access level. Penguin recei
 
 ![Concurrent Removal](/assets/images/250716-concurrent-removal.png)
 
-> Here we have another Lamport Clock, this one depicting a case of "concurrent removal", as described in the paragraph above.
+> Here we have another Concurrency Diagram, this one depicting a case of "concurrent removal", as described in the paragraph above.
 
 In this scenario, since Penguin's promotion of Parrot and Duck's demotion of Penguin happened concurrently, Penguin is no longer a manager (since the demotion takes precedence) and any downstream actions taken by Penguin are ignored. This means that Parrot and his friends are no longer managers of the group and any actions they took as managers are invalidated.
 
 ### Broadcast-Only Contexts
 
 Another open question which emerged during our work is how to achieve access control in broadcast-based systems; this includes systems which rely exclusively on gossip-based replication strategies. In such cases, we can't control who will receive the data - just like a community radio station can't control who listens to their broadcast. As long as we have strong encryption in place, we can at least control who is able to make sense of the received data. We consider this an open problem and look forward to discuss possible solutions with other researchers.
+
+## Informal Correctness Argument
+
+Ultimately, our access-control design is based on replicating a grow-only set of authenticated immutable operations, since every participant replicates and maintain the full history of operations associated with every group, which is already known to be state-based CRDT. Only correct operations are replicated, by verifying that the causal history of an operation, i.e. the set of all operations that happened-before, indeeds proves that the author had the permission to perform that operation at the time. In the presence of concurrent operations that are replicated later, and given a Resolver strategy such as the one presented before, some correct operations may be later invalidated. Since invalidated operation will never be considered valid again, no matter what additional information is further obtained by replicating new operations, then the set of operations used to compute permissions is a state-based CRDT and is therefore convergent, i.e. given the same set of replicated operations two participants will compute the same permissions. Our design is therefore eventually consistent (see [Byzantine Eventual-Consistency](https://arxiv.org/abs/2012.00472)).
 
 ## Related Work
 
