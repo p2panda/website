@@ -189,7 +189,6 @@ code {
   background-color: var(--white);
   padding: 1px 10px;
   border-radius: 10px;
-  overflow: scroll;
   vertical-align: bottom;
 }
 
@@ -211,6 +210,10 @@ blockquote code {
   font-size: 15px;
   background-color: var(--white);
   padding: 3px;
+}
+
+pre code {
+  overflow: scroll;
 }
 
 ol,
