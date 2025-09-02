@@ -5,6 +5,9 @@ subtitle: "Design and implementation overview of p2panda-auth"
 author: glyph & sam
 ---
 
+_This post was edited on 02.09.25 to include corrections and an Informal Correctness
+Argument by [Dr. Erick Lavoie](https://dmi.unibas.ch/en/persons/lavoie-erick/)._
+
 Having just released the first version of our [p2panda-auth](https://crates.io/crates/p2panda-auth) crate, it seems like the right time to write about access control in decentralised systems. In the process, we'll share an overview of the system we've designed - as well as a discussion of some of the technical challenges involved in implementing peer-to-peer group management and access control. We're grateful to [NLnet](https://nlnet.nl/project/P2Panda-groups/) for supporting us in this work.
 
 ## System Requirements
