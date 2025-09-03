@@ -209,3 +209,11 @@ In a scenario where Panda creates a group with Panda and Bear inside, Bear concu
 In a system with forward secrecy, such as p2panda’s “Message Encryption” Scheme, we would not run into problems as Owl will not be able to decrypt any previously created messages. However, if we use encryption systems with only Post-Compromise security, like p2panda’s “Data Encryption” Scheme, Owl will now be able to decrypt all previously created data, even if they’ve only been very “briefly” in the group from Bear’s perspective!
 
 To avoid this scenario in PCS-only encryption systems we need to ask for consensus from the group *before* we hand over secret keys to new members. We can achieve this with a form of acknowledgement protocol (similar to what we’ve described previously) and only allow sharing secrets *after* every removal has been acknowledged by everyone or at least a majority of the group.
+
+## Patterns everywhere!
+
+This was it for now for our little excursion into convergent data-types! We hope that it inspired you to see a range of "tricks" one can do with them to make them work in peer-to-peer environments.
+
+It is still too early, but it makes us hopeful for a future where we will slowly converge to re-usable "patterns" which can be applied to all sorts of problems, apart from access control solutions. Across the p2panda stack we can slowly see those "repetitions". It surely helped to have developed all data types independently from each other, outside of a monolithic all-in-one solution as it forced us to be very clear about the common interfaces they share.
+
+Maybe one day it will be very easy to "compose" them with other solutions outside of the p2panda universe because these patterns, terminology and requirements around convergent data types become well-understood and known? Imagine combining the access control data type with someone else's work to do efficient pruning or another one's code to detect and mitigate Byzantine behaviour? This is an quite exciting future for sharing code, progress and research across peer-to-peer projects!
